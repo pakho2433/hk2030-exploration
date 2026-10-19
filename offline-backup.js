@@ -19,7 +19,7 @@ export function createOfflineBackup(){
   const connection=(async()=>{
     if(!('serviceWorker' in navigator)||!window.isSecureContext)return false;
     try{
-      await navigator.serviceWorker.register('/sw.js',{scope:'/',updateViaCache:'none'});
+      await navigator.serviceWorker.register('sw.js',{scope:'./',updateViaCache:'none'});
       await Promise.race([navigator.serviceWorker.ready,delay(2500)]);
       if(!navigator.serviceWorker.controller){
         await Promise.race([new Promise(resolve=>navigator.serviceWorker.addEventListener('controllerchange',resolve,{once:true})),delay(1500)]);

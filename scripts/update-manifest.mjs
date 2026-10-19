@@ -21,6 +21,6 @@ for(const asset of manifest.shellAssets){
   Object.assign(asset,next);
 }
 // A new package id gives each content version its own offline cache.
-manifest.packageId=sha(JSON.stringify([manifest.runtimeSha256,manifest.shellAssets])).slice(0,16);
+if(manifest.packageId)manifest.packageId=sha(JSON.stringify([manifest.runtimeSha256,manifest.shellAssets])).slice(0,16);
 writeFileSync(manifestPath,JSON.stringify(manifest,null,2)+'\n');
-console.log(`${changed} shell asset(s) changed; packageId ${manifest.packageId}`);
+console.log(`${changed} shell asset(s) changed; packageId ${manifest.packageId||'(none: offline backup disabled)'}`);

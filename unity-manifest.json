@@ -2,12 +2,12 @@
   "version": "hk2030-unity-v40-compact-westk-fast-walk",
   "scene": "HK2030EducationWalkV40",
   "preloadsAllStops": true,
-  "loaderUrl": "/unity/v6-e1b03a6f10195308/Build/game.loader.js",
+  "loaderUrl": "unity/v6-e1b03a6f10195308/Build/game.loader.js",
   "config": {
-    "dataUrl": "/unity/v6-e1b03a6f10195308/Build/game.data.gz",
-    "frameworkUrl": "/unity/v6-e1b03a6f10195308/Build/game.framework.js.gz",
-    "codeUrl": "/unity/v6-e1b03a6f10195308/Build/game.wasm.gz",
-    "streamingAssetsUrl": "/unity/v6-e1b03a6f10195308/StreamingAssets",
+    "dataUrl": "unity/v6-e1b03a6f10195308/Build/game.data",
+    "frameworkUrl": "unity/v6-e1b03a6f10195308/Build/game.framework.js",
+    "codeUrl": "unity/v6-e1b03a6f10195308/Build/game.wasm",
+    "streamingAssetsUrl": "unity/v6-e1b03a6f10195308/StreamingAssets",
     "companyName": "Hong Kong School Learning",
     "productName": "HK2030 Exploration",
     "productVersion": "4.6",
@@ -29,15 +29,21 @@
   "dataBytes": 217885253,
   "dataSha256": "19c86226c5acea48603a7aaf5ddcad8cd5b5368a1510a0f001ef1cd8ba329f39",
   "dataCompressedBytes": 194612344,
-  "codeCompressedBytes": 6469841,
-  "frameworkCompressedBytes": 83664,
+  "codeCompressedBytes": 20391644,
+  "frameworkCompressedBytes": 389767,
   "textureVariants": {
     "astc": {
-      "dataUrl": "/unity/v6-e1b03a6f10195308/Build/game.astc.data.gz",
+      "dataUrl": "unity/v6-e1b03a6f10195308/Build/game.astc.data",
       "dataBytes": 201803575,
       "dataSha256": "749b772fb3f591ca3858e73796954194ea287ba013d83f70af418ba15d5b8e37",
       "dataCompressedBytes": 186232886,
-      "dataCompressedSha256": "3def67f7c86a5665ea97099e2bd045e2f547e09c7584e55eb46278141e97c8d3"
+      "dataCompressedSha256": "3def67f7c86a5665ea97099e2bd045e2f547e09c7584e55eb46278141e97c8d3",
+      "dataParts": [
+        "unity/v6-e1b03a6f10195308/Build/game.astc.data.gz.part0",
+        "unity/v6-e1b03a6f10195308/Build/game.astc.data.gz.part1",
+        "unity/v6-e1b03a6f10195308/Build/game.astc.data.gz.part2",
+        "unity/v6-e1b03a6f10195308/Build/game.astc.data.gz.part3"
+      ]
     }
   },
   "runtimeId": "e1b03a6f10195308",
@@ -66,34 +72,70 @@
   },
   "nativeFiles": [
     {
-      "url": "/unity/v6-e1b03a6f10195308/Build/game.loader.js",
+      "url": "unity/v6-e1b03a6f10195308/Build/game.loader.js",
       "bytes": 26982,
       "sha256": "2e2b1b613ed68d549ba3d5dc1b99ea0bf47c16a4a93d0f9d9fbfb3b3318ce813",
       "encoding": "identity"
     },
     {
-      "url": "/unity/v6-e1b03a6f10195308/Build/game.data.gz",
-      "bytes": 194612344,
-      "sha256": "de40d3815a23370c4e03ee548537c50ac048573612d8fb0828b883ee05ba2067",
-      "encoding": "gzip"
+      "url": "unity/v6-e1b03a6f10195308/Build/game.framework.js",
+      "bytes": 389767,
+      "sha256": "d14d78ed85b47f8082a1f5bbb2e832fc0738b23ec44bb554ccff684e739212b0",
+      "encoding": "identity"
     },
     {
-      "url": "/unity/v6-e1b03a6f10195308/Build/game.astc.data.gz",
-      "bytes": 186232886,
-      "sha256": "3def67f7c86a5665ea97099e2bd045e2f547e09c7584e55eb46278141e97c8d3",
-      "encoding": "gzip"
+      "url": "unity/v6-e1b03a6f10195308/Build/game.wasm",
+      "bytes": 20391644,
+      "sha256": "4fc69f243f683ffcb01a6293e514f18407acd50a87a3d40b4f0db64502151d83",
+      "encoding": "identity"
     },
     {
-      "url": "/unity/v6-e1b03a6f10195308/Build/game.framework.js.gz",
-      "bytes": 83664,
-      "sha256": "07e79a4f0719f4cdf072d4f9a0bd788a62cd3dc2068114515c040bf2fd564cdc",
-      "encoding": "gzip"
+      "url": "unity/v6-e1b03a6f10195308/Build/game.data.gz.part0",
+      "bytes": 48653086,
+      "sha256": "49bc9440b8e2424a98b6fa4220e983d9660cae3b7c550e4d1ee9d4e3929bcb9d",
+      "encoding": "gzip-part"
     },
     {
-      "url": "/unity/v6-e1b03a6f10195308/Build/game.wasm.gz",
-      "bytes": 6469841,
-      "sha256": "a09303aa98ba5adf1d3835bfe746098cf8787dcbb1ccc0030b443bd4191f2b5e",
-      "encoding": "gzip"
+      "url": "unity/v6-e1b03a6f10195308/Build/game.data.gz.part1",
+      "bytes": 48653086,
+      "sha256": "781a0fc94984a7d9101872b00c9c34f7d6612439e2a14db73cb03c332412901c",
+      "encoding": "gzip-part"
+    },
+    {
+      "url": "unity/v6-e1b03a6f10195308/Build/game.data.gz.part2",
+      "bytes": 48653086,
+      "sha256": "f2f6eec050e34b6519b4cf10d2eb5b371978eb81d26f97d0eeeef88d75a70a3d",
+      "encoding": "gzip-part"
+    },
+    {
+      "url": "unity/v6-e1b03a6f10195308/Build/game.data.gz.part3",
+      "bytes": 48653086,
+      "sha256": "a069db2cbc1c7b1c4b581c4231cbfdbfea25e49ffc5315044da42fa64c0c49e3",
+      "encoding": "gzip-part"
+    },
+    {
+      "url": "unity/v6-e1b03a6f10195308/Build/game.astc.data.gz.part0",
+      "bytes": 46558222,
+      "sha256": "d7f9d134b335f20d608372b98b2fc62bbe6fb5df55510aadf606a54decba706b",
+      "encoding": "gzip-part"
+    },
+    {
+      "url": "unity/v6-e1b03a6f10195308/Build/game.astc.data.gz.part1",
+      "bytes": 46558222,
+      "sha256": "c25b60058bf50c3747d21ae84514c39603ddfe34cc71226d275600adda5bff14",
+      "encoding": "gzip-part"
+    },
+    {
+      "url": "unity/v6-e1b03a6f10195308/Build/game.astc.data.gz.part2",
+      "bytes": 46558221,
+      "sha256": "b91d94724689affe80343c6a2e48b83975a04d61a89889b1724489e9993bea2e",
+      "encoding": "gzip-part"
+    },
+    {
+      "url": "unity/v6-e1b03a6f10195308/Build/game.astc.data.gz.part3",
+      "bytes": 46558221,
+      "sha256": "1fa35d9279de9cfc83a6b39e12638deb04abc9d79a2aeb14d131e4af42a1ad2e",
+      "encoding": "gzip-part"
     }
   ],
   "buildAudits": {
@@ -121,14 +163,14 @@
   "shellAssets": [
     {
       "url": "/",
-      "bytes": 11853,
-      "sha256": "6e3e7629275df384d0cc2f67fa8ad3066f5cc8b8350e1e61255e7d80b68ef343",
+      "bytes": 11850,
+      "sha256": "80b50bf9b77667e7a2d6af438a7d5d94b157f3a4fa46bcd1871d4a9d32473b13",
       "kind": "shell"
     },
     {
       "url": "/app.js?v=6",
-      "bytes": 46218,
-      "sha256": "87b1191510bb180063718a4d471bec6c2f97f8c511963ab1e2abc3bc9caacca3",
+      "bytes": 47567,
+      "sha256": "8082dc511efe1525f48a444ef2b5ea67a471022ef5ed6bd78cf0cfc80720071d",
       "kind": "shell"
     },
     {
@@ -164,7 +206,7 @@
     {
       "url": "/offline-backup.js?v=6",
       "bytes": 3755,
-      "sha256": "07a0fc4e5e95172fdf928c12943e97e17c181b8a9eba8953b03f9d416a88af55",
+      "sha256": "4a21379d5b86afdf0cb0a2a1094bb8ac69a46c32cd42c699a5a4446e783acfb3",
       "kind": "shell"
     },
     {
@@ -204,5 +246,11 @@
       "kind": "shell"
     }
   ],
-  "packageId": "bb1f5b05040aad7e"
+  "dataParts": [
+    "unity/v6-e1b03a6f10195308/Build/game.data.gz.part0",
+    "unity/v6-e1b03a6f10195308/Build/game.data.gz.part1",
+    "unity/v6-e1b03a6f10195308/Build/game.data.gz.part2",
+    "unity/v6-e1b03a6f10195308/Build/game.data.gz.part3"
+  ],
+  "dataPartsEncoding": "gzip"
 }
