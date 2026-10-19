@@ -157,8 +157,36 @@ function updateVRState(state){
 function enterClassroomVR(){
   if(!ready||!exploring||activeStop!=='classroom'||classroomVR||vrEntering||interactionBusy||transitioning||finaleStarted)return;
   clearGreeting();closeDialogs();moveX=moveY=lookX=lookY=0;vrEntering=true;renderVRControls();
-  send('SetInput',JSON.stringify({moveX:0,moveY:0,lookX:0,lookY:0}));send('EnterClassroomVR');$('unity-canvas').focus();
-  vrRequestTimer=setTimeout(()=>{if(!classroomVR){vrEntering=false;renderVRControls();announce('太空體驗暫未開啟，請再試一次。',{force:true});}},3000);
+  send('SetInput',JSON.stringify({moveX:0,moveY:0,lookX:0,lookY:0}));
+  // First-person "put on the headset" overlay; the scene switches while the view is dark.
+  playVRDonning(()=>{
+    if(!vrEntering||!exploring||activeStop!=='classroom'||classroomVR)return false;
+    send('EnterClassroomVR');$('unity-canvas').focus();
+    vrRequestTimer=setTimeout(()=>{if(!classroomVR){vrEntering=false;renderVRControls();announce('太空體驗暫未開啟，請再試一次。',{force:true});}},3000);
+    return true;
+  });
+}
+let vrDonningFrame=0;
+function playVRDonning(onCovered){
+  const overlay=$('vr-donning'),rig=overlay.querySelector('.vr-donning-rig'),shade=overlay.querySelector('.vr-donning-shade'),caption=overlay.querySelector('.vr-donning-caption');
+  cancelAnimationFrame(vrDonningFrame);overlay.hidden=false;
+  const reduced=matchMedia('(prefers-reduced-motion:reduce)').matches,total=reduced?1200:3400,coverAt=reduced?500:2250;
+  const ease=t=>t<.5?4*t*t*t:1-Math.pow(-2*t+2,3)/2,seg=(t,a,b)=>Math.min(1,Math.max(0,(t-a)/(b-a))),mix=(a,b,k)=>a+(b-a)*k;
+  let start=performance.now(),covered=false,entered=true;
+  const frame=()=>{const now=performance.now();
+    const t=(now-start)*(reduced?3400/1200:1);
+    // Rise into view, lift to eye level, then fill the screen.
+    const rise=ease(seg(t,0,600)),lift=ease(seg(t,600,1600)),close=ease(seg(t,1600,2300));
+    const y=mix(mix(120,38,rise),0,lift),scale=mix(mix(.85,1.35,lift),6.5,close);
+    rig.style.transform=`translate(-50%,-50%) translateY(${y}%) scale(${scale})`;
+    rig.style.opacity=String(1-seg(t,2250,2450));
+    const dark=seg(t,1500,2250),reveal=ease(seg(t,2700,3400));
+    shade.style.setProperty('--vr-dark',String(dark));shade.style.setProperty('--vr-lens',`${reveal*152-12}%`);caption.style.opacity=String(1-reveal);
+    if(!covered&&now-start>=coverAt){covered=true;entered=onCovered()!==false;if(!entered)start=now-2700/(reduced?3400/1200:1);}
+    if(t<3400)vrDonningFrame=requestAnimationFrame(frame);
+    else{overlay.hidden=true;rig.style.cssText='';shade.style.cssText='';caption.style.cssText='';}
+  };
+  vrDonningFrame=requestAnimationFrame(frame);
 }
 function exitClassroomVR(){
   if(!classroomVR)return;

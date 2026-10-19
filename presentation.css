@@ -17,3 +17,9 @@ body.presentation .station-caption{bottom:53px;left:20px;max-width:min(590px,75v
 #experience[data-vr-active="true"] .station-caption #station-description{display:none}
 #experience[data-vr-active="true"] .world-status{background:#132740ba}
 #experience[data-vr-active="true"] #interact-button{background:#d9f4ff;color:#153b53;border-color:#bcecff}
+
+.vr-donning{position:absolute;inset:0;z-index:28;pointer-events:none;overflow:hidden}
+.vr-donning-rig{position:absolute;left:50%;top:50%;width:min(92vw,120vh);transform:translate(-50%,-50%) translateY(120%);will-change:transform,opacity}
+.vr-donning-art{display:block;width:100%;height:auto;filter:drop-shadow(0 18px 30px #0008)}
+.vr-donning-shade{--vr-dark:0;--vr-lens:-12%;position:absolute;inset:0;background:#02060a;opacity:var(--vr-dark);-webkit-mask-image:radial-gradient(ellipse at 50% 50%,transparent var(--vr-lens),#000 calc(var(--vr-lens) + 12%));mask-image:radial-gradient(ellipse at 50% 50%,transparent var(--vr-lens),#000 calc(var(--vr-lens) + 12%))}
+.vr-donning-caption{position:absolute;left:50%;bottom:12%;transform:translateX(-50%);margin:0;padding:8px 16px;border-radius:12px;background:#102a31c9;color:#ffd47d;font-size:13px;font-weight:600;letter-spacing:.1em;white-space:nowrap}

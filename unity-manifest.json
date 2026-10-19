@@ -163,14 +163,14 @@
   "shellAssets": [
     {
       "url": "/",
-      "bytes": 11992,
-      "sha256": "31902cdcf3a771c548993d2aac01937b68036af21fffde14b3832b03279c395b",
+      "bytes": 15480,
+      "sha256": "627d5a1fbc21f9d8cd39590c07e3d901d68e5a8314a0b1a5ebdd6c4be9a160fd",
       "kind": "shell"
     },
     {
       "url": "/app.js?v=7",
-      "bytes": 50795,
-      "sha256": "4a84c162ac040727795f537daa1ae67ca03f0eb41245ab0d3c643c5089c3676e",
+      "bytes": 52671,
+      "sha256": "067f84e1a859b4f8f2030fa8444aa1fcda114c56369ab2ab01755ce1e993b500",
       "kind": "shell"
     },
     {
@@ -181,8 +181,8 @@
     },
     {
       "url": "/presentation.css?v=7",
-      "bytes": 12273,
-      "sha256": "3ec98897e1589b1be78934d512ad0bf0557fa4461e8e1c806260316be2f3b766",
+      "bytes": 13174,
+      "sha256": "6917b3a7c18210694ee3f62bccf6a5edcff07fdf144f1d54d56fc5503a0bcb51",
       "kind": "shell"
     },
     {
