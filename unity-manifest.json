@@ -164,47 +164,47 @@
     {
       "url": "/",
       "bytes": 11992,
-      "sha256": "728777e3e288166ea757421682e1268e48f275403d9d219db520f37110ea50df",
+      "sha256": "31902cdcf3a771c548993d2aac01937b68036af21fffde14b3832b03279c395b",
       "kind": "shell"
     },
     {
-      "url": "/app.js?v=6",
-      "bytes": 50647,
-      "sha256": "cac1e016b185581707c6fdf2a269ad805350402e29de85b1c8a2b3a917427295",
+      "url": "/app.js?v=7",
+      "bytes": 50795,
+      "sha256": "4a84c162ac040727795f537daa1ae67ca03f0eb41245ab0d3c643c5089c3676e",
       "kind": "shell"
     },
     {
-      "url": "/styles.css?v=6",
+      "url": "/styles.css?v=7",
       "bytes": 17852,
       "sha256": "ad898ba8b9534180c9bb499dd67f7219e57b0ceb5eb5f36e061e2d100a8c1967",
       "kind": "shell"
     },
     {
-      "url": "/presentation.css?v=6",
+      "url": "/presentation.css?v=7",
       "bytes": 12273,
       "sha256": "3ec98897e1589b1be78934d512ad0bf0557fa4461e8e1c806260316be2f3b766",
       "kind": "shell"
     },
     {
-      "url": "/tour-data.js?v=6",
+      "url": "/tour-data.js?v=7",
       "bytes": 3518,
       "sha256": "0f19b92212f0362387cbe75963b9d142b02b0400bae0ba166e5205911708331e",
       "kind": "shell"
     },
     {
-      "url": "/npc-dialogues.js?v=6",
+      "url": "/npc-dialogues.js?v=7",
       "bytes": 7646,
       "sha256": "bf12296b8fe670ed889e59526d144a16a9d16cc8349ff0a51064ba61306b0f4a",
       "kind": "shell"
     },
     {
-      "url": "/presentation-data.js?v=6",
+      "url": "/presentation-data.js?v=7",
       "bytes": 3884,
       "sha256": "d176b6455c29d96ae042e3837d8632af88649af49d9cac36d081decbb809d826",
       "kind": "shell"
     },
     {
-      "url": "/offline-backup.js?v=6",
+      "url": "/offline-backup.js?v=7",
       "bytes": 3755,
       "sha256": "4a21379d5b86afdf0cb0a2a1094bb8ac69a46c32cd42c699a5a4446e783acfb3",
       "kind": "shell"

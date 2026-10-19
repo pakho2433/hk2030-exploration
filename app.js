@@ -1,7 +1,7 @@
-import {stops} from './tour-data.js?v=6';
-import {getNpcDialogue} from './npc-dialogues.js?v=6';
-import {presentationFor} from './presentation-data.js?v=6';
-import {createOfflineBackup,packageFor} from './offline-backup.js?v=6';
+import {stops} from './tour-data.js?v=7';
+import {getNpcDialogue} from './npc-dialogues.js?v=7';
+import {presentationFor} from './presentation-data.js?v=7';
+import {createOfflineBackup,packageFor} from './offline-backup.js?v=7';
 const $ = id => document.getElementById(id);
 let unity=null,ready=false,sceneReady=false,exploring=false,activeStop='harbour',year=2030,animationToken=0,toastTimer,finaleStarted=false,transitioning=false;
 let lookX=0,lookY=0,moveX=0,moveY=0,lastSentMoveX=0,lastSentMoveY=0,forceNextInput=true,sourceDocument=null;
@@ -326,7 +326,8 @@ $('retry-button').addEventListener('click',()=>location.reload());
 $('load-retry').addEventListener('click',()=>location.reload());
 function chooseTextureData(manifest){
   const variant=manifest.textureVariants?.astc;
-  if(!variant)return null;
+  // ?textures=generic forces the non-ASTC scene data (for comparing on phones).
+  if(!variant||new URLSearchParams(location.search).get('textures')==='generic')return null;
   // Probe a separate context, release it, then let Unity own the world canvas.
   const probe=document.createElement('canvas');let gl;
   try{

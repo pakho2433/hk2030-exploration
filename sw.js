@@ -21,7 +21,7 @@ function validPackage(pkg){
     const sceneData=file.kind==='data'&&/^\/unity\/v6-[a-f0-9]{16}\/Build\/game(?:\.astc)?\.data\.gz$/.test(url.pathname);
     if(file.bytes>(sceneData?250000000:128*1024*1024))return false;
     if(!native&&!SHELL.has(url.pathname))return false;
-    if(url.search&&url.search!=='?v=6')return false;
+    if(url.search&&url.search!=='?v=7')return false;
     if(file.kind==='data')data++;if(file.kind==='wasm')wasm++;
     if(url.pathname.endsWith('.framework.js.gz'))framework++;
     if(url.pathname.endsWith('.loader.js'))loader++;
@@ -116,7 +116,7 @@ self.addEventListener('fetch',event=>{
   const request=event.request,url=new URL(request.url);
   if(request.method!=='GET'||url.origin!==self.location.origin||url.hash)return;
   const native=/^\/unity\/v6-[a-f0-9]{16}\/Build\//.test(url.pathname);
-  const shell=SHELL.has(url.pathname)&&(!url.search||url.search==='?v=6');
+  const shell=SHELL.has(url.pathname)&&(!url.search||url.search==='?v=7');
   if(!native&&!shell)return;
   const key=absolute(url.pathname==='/'||url.pathname==='/index.html'?'/':url.pathname+url.search);
   event.respondWith((async()=>{
