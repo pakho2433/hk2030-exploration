@@ -181,7 +181,7 @@ function checkBackupInStandby(){
   backupClient.check(cachePackage).then(result=>{backupSaved=Boolean(result.complete);$('backup-status').textContent=backupSaved?'此版本已有離線備用。':'';backupControls();})
     .catch(()=>{$('backup-status').textContent='';backupControls();}).finally(()=>{backupChecking=false;backupControls();});
 }
-function updateProgress(state){$('tour-progress').textContent='講者自選';document.querySelectorAll('#stop-list [data-stop]').forEach((button,i)=>{button.classList.remove('completed');button.firstElementChild.textContent=String(i+1).padStart(2,'0');button.title='自行選擇此站，可隨時轉站';});}
+function updateProgress(state){$('tour-progress').textContent=autoTourLabel();document.querySelectorAll('#stop-list [data-stop]').forEach((button,i)=>{button.classList.remove('completed');button.firstElementChild.textContent=String(i+1).padStart(2,'0');button.title='自行選擇此站，可隨時轉站';});}
 window.addEventListener('hk2030-state',event=>{let s=event.detail;try{if(typeof s==='string')s=JSON.parse(s);}catch{return;}if(!s||typeof s!=='object')return;if(s.ready){sceneReady=true;checkReady();}if(typeof s.busy==='boolean'){interactionBusy=s.busy;$('next-button').disabled=false;$('interact-button').disabled=interactionBusy;document.querySelectorAll('#stop-list [data-stop]').forEach(button=>button.disabled=false);}updateVRState(s);updateCargoDestination(s);updateDemoState(s);updateNpcState(s);if(Array.isArray(s.visitedIds))updateProgress(s);if(s.stopId&&s.stopId!==activeStop)updateStop(s.stopId,s);if(s.year&&String(s.year)!==$ ('world-year').value){year=Number(s.year);$('world-year').value=String(year);}if(s.message&&s.message!==window.__lastWorldMessage){window.__lastWorldMessage=s.message;if(exploring)announce(s.message);}window.__hk2030State=s;renderVRControls();});
 async function beginFinale(){if(!exploring||transitioning)return;const op=++presenterOperation;finaleStarted=true;clearGreeting();transitioning=true;closeDialogs();document.exitPointerLock?.();moveX=moveY=lookX=lookY=0;clearTimeout(vrRequestTimer);vrEntering=false;if(classroomVR)send('ExitClassroomVR');send('SetPaused','true');$('transition-name').textContent='返回維多利亞港';$('transition-region').textContent='演講者選擇 · 播放煙花';$('transition').hidden=false;await wait(900);if(op!==presenterOperation)return;year=2030;$('world-year').value='2030';send('SetYear',year);send('BeginFinale');activeStop='harbour';$('station-kicker').textContent='演講者自行選擇';$('station-name').textContent='維港，下一個五年';$('station-description').textContent='由你決定何時播放煙花、繼續考察或結束演講。';$('next-button').hidden=true;$('interact-button').hidden=true;$('exhibit-button').hidden=true;$('world-year').disabled=true;$('year-note').textContent='2030願景 · 煙花';$('map-button').disabled=false;$('reset-button').textContent='返回考察';await wait(550);if(op!==presenterOperation)return;$('transition').hidden=true;transitioning=false;announce('煙花播放中 · 可繼續考察或結束演講');}
 function interact(){
@@ -411,5 +411,58 @@ async function loadWorld(){
 }
 $('experience').dataset.ready='false';$('experience').dataset.mode='presentation';
 buildStopList();buildMap();loadSources();bindTouch();bindDesktopLook();updateStop('harbour');requestAnimationFrame(inputLoop);loadWorld();
-window.__hk2030App={get ready(){return ready},get exploring(){return exploring},get activeStop(){return activeStop},goToStop,showIntroduction,stops};
+// Auto navigation: visit each stop in tour order, about 30 seconds each.
+// While paused the presenter keeps full manual control (walk, look, change stop);
+// a manual stop change restarts the 30 seconds at that stop.
+const AUTO_STAY_MS=30000;
+const autoTour={running:false,paused:false,stopId:null,elapsed:0,demoStarted:false,last:0};
+function autoTourLabel(){
+  if(!autoTour.running)return '講者自選';
+  const index=stops.findIndex(s=>s.id===activeStop)+1,left=Math.max(0,Math.ceil((AUTO_STAY_MS-autoTour.elapsed)/1000));
+  return autoTour.paused?`自動導航已暫停 · ${index}／${stops.length}`:`自動導航 ${index}／${stops.length} · ${left}秒`;
+}
+function renderAutoTour(){
+  $('autotour-button').textContent=autoTour.running?'停止導航':'自動導航';
+  $('autotour-button').setAttribute('aria-pressed',String(autoTour.running));
+  $('autotour-pause').hidden=!autoTour.running;
+  $('autotour-pause').textContent=autoTour.paused?'繼續':'暫停';
+  $('autotour-pause').setAttribute('aria-pressed',String(autoTour.paused));
+  $('tour-progress').textContent=autoTourLabel();
+}
+function startAutoTour(){
+  if(!exploring||!ready)return;
+  if(finaleStarted)enterWorld();
+  Object.assign(autoTour,{running:true,paused:false,stopId:activeStop,elapsed:0,demoStarted:false,last:performance.now()});
+  renderAutoTour();announce('自動導航：每站約30秒，可隨時暫停',{force:true});
+}
+function stopAutoTour(){if(!autoTour.running)return;autoTour.running=false;autoTour.paused=false;renderAutoTour();}
+function toggleAutoTourPause(){
+  if(!autoTour.running)return;
+  autoTour.paused=!autoTour.paused;autoTour.last=performance.now();renderAutoTour();
+  announce(autoTour.paused?'已暫停 · 可自行行走和環顧':'繼續自動導航',{force:true});
+  $('unity-canvas').focus();
+}
+function autoTourTick(){
+  const now=performance.now(),dt=now-autoTour.last;autoTour.last=now;
+  if(!autoTour.running)return;
+  if(!exploring||finaleStarted){stopAutoTour();return;}
+  if(autoTour.stopId!==activeStop){autoTour.stopId=activeStop;autoTour.elapsed=0;autoTour.demoStarted=false;}
+  if(autoTour.paused||transitioning||classroomVR||document.querySelector('dialog[open]')){$('tour-progress').textContent=autoTourLabel();return;}
+  autoTour.elapsed+=dt;
+  // Start the station's demo animation shortly after arriving.
+  if(!autoTour.demoStarted&&autoTour.elapsed>1500){
+    autoTour.demoStarted=true;
+    if(activeStop==='kwai')goToCargoPoint('follow');
+    else if(!interactionBusy&&window.__hk2030State?.interactable!==false)send('Interact');
+  }
+  if(autoTour.elapsed>=AUTO_STAY_MS){
+    const index=stops.findIndex(s=>s.id===activeStop),next=stops[(index+1)%stops.length].id;
+    autoTour.elapsed=0;goToStop(next);
+  }
+  $('tour-progress').textContent=autoTourLabel();
+}
+$('autotour-button').addEventListener('click',()=>autoTour.running?stopAutoTour():startAutoTour());
+$('autotour-pause').addEventListener('click',toggleAutoTourPause);
+setInterval(autoTourTick,250);
+window.__hk2030App={get autoTour(){return {...autoTour}},get ready(){return ready},get exploring(){return exploring},get activeStop(){return activeStop},goToStop,showIntroduction,stops};
 
