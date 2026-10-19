@@ -115,6 +115,7 @@ function updateStop(id,state={}){
   document.querySelectorAll('[data-stop]').forEach(el=>el.setAttribute('aria-current',el.dataset.stop===id?'location':'false'));
   renderVRControls();
   $('exhibit-button').hidden=id!=='museum'||finaleStarted;
+  if(id==='classroom')preloadVRDonning();
 }
 function renderVRControls(){
   const inClass=exploring&&activeStop==='classroom'&&!finaleStarted;
@@ -166,8 +167,46 @@ function enterClassroomVR(){
     return true;
   });
 }
-let vrDonningFrame=0;
+let vrDonningFrame=0,vrVideoPreloaded=false;
+// Generated first-person clip (hands lift the headset to the eyes, ends black).
+const VR_VIDEO_COVER_S=3.7,VR_REVEAL_MS=700;
+function preloadVRDonning(){
+  if(vrVideoPreloaded||matchMedia('(prefers-reduced-motion:reduce)').matches)return;
+  vrVideoPreloaded=true;const video=$('vr-donning-video');video.preload='auto';video.load();
+}
 function playVRDonning(onCovered){
+  const overlay=$('vr-donning'),video=$('vr-donning-video'),rig=overlay.querySelector('.vr-donning-rig'),shade=overlay.querySelector('.vr-donning-shade'),caption=overlay.querySelector('.vr-donning-caption');
+  if(matchMedia('(prefers-reduced-motion:reduce)').matches||video.error){playVRDonningSVG(onCovered);return;}
+  cancelAnimationFrame(vrDonningFrame);
+  let done=false,covered=false,started=false,revealStart=0;
+  const finish=()=>{overlay.style.background='';done=true;cancelAnimationFrame(vrDonningFrame);video.pause();video.hidden=true;video.style.opacity='';overlay.hidden=true;rig.hidden=false;caption.hidden=false;shade.style.cssText='';};
+  const fallback=()=>{if(done||started)return;done=true;video.pause();video.hidden=true;rig.hidden=false;caption.hidden=false;playVRDonningSVG(onCovered);};
+  overlay.hidden=false;rig.hidden=true;caption.hidden=true;video.hidden=false;video.style.opacity='0';
+  shade.style.setProperty('--vr-dark','0');shade.style.setProperty('--vr-lens','-12%');
+  const startedAt=performance.now();
+  const cover=()=>{if(covered)return;covered=true;overlay.style.background='';shade.style.setProperty('--vr-dark','1');video.hidden=true;onCovered();revealStart=performance.now();};
+  const frame=()=>{
+    if(done)return;const now=performance.now();
+    if(!started&&now-startedAt>1500){fallback();return;}
+    if(started&&!covered){
+      const fade=Math.min(1,video.currentTime/.25);video.style.opacity=String(fade);overlay.style.background=`rgba(2,6,10,${fade})`;
+      if(video.currentTime>=VR_VIDEO_COVER_S||video.ended||now-startedAt>8000)cover();
+    }
+    if(covered){
+      const t=Math.min(1,(now-revealStart)/VR_REVEAL_MS),reveal=t<.5?4*t*t*t:1-Math.pow(-2*t+2,3)/2;
+      shade.style.setProperty('--vr-lens',`${reveal*152-12}%`);
+      if(t>=1){finish();return;}
+    }
+    vrDonningFrame=requestAnimationFrame(frame);
+  };
+  video.onerror=fallback;
+  video.onplaying=()=>{if(done){video.pause();return;}started=true;};
+  try{video.currentTime=0;}catch{}
+  const playing=video.play();
+  if(playing?.catch)playing.catch(fallback);
+  vrDonningFrame=requestAnimationFrame(frame);
+}
+function playVRDonningSVG(onCovered){
   const overlay=$('vr-donning'),rig=overlay.querySelector('.vr-donning-rig'),shade=overlay.querySelector('.vr-donning-shade'),caption=overlay.querySelector('.vr-donning-caption');
   cancelAnimationFrame(vrDonningFrame);overlay.hidden=false;
   const reduced=matchMedia('(prefers-reduced-motion:reduce)').matches,total=reduced?1200:3400,coverAt=reduced?500:2250;
