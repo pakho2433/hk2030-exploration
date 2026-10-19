@@ -1,0 +1,868 @@
+{
+  "schema_version": 1,
+  "verified_on": "2026-10-13",
+  "language": "zh-Hant-HK",
+  "title": "2030考察世界的公開資料來源",
+  "sources": [
+    {
+      "id": "national_plan",
+      "name": "國家十五五規劃綱要",
+      "title": "中華人民共和國國民經濟和社會發展第十五個五年規劃綱要",
+      "url": "https://www.ndrc.gov.cn/fggz/fzzlgh/gjfzgh/202603/U020260317369114704096.pdf",
+      "publisher": "國家發展和改革委員會",
+      "claim": "十五五涵蓋2026至2030年；環境、能源、教育、科技、物流與醫療以正式綱要為依據。",
+      "status": "正式規劃",
+      "location": "全國",
+      "sections": [
+        "導言，印刷p1",
+        "新型能源體系建設專欄5，印刷p20",
+        "教育數字化，印刷p89",
+        "健康中國建設專欄16，印刷p93",
+        "香港角色第五十九章，印刷p128"
+      ],
+      "verification": "完整讀取官方PDF140頁，非建議稿",
+      "verified_on": "2026-10-12"
+    },
+    {
+      "id": "hk_plan",
+      "name": "香港首個五年規劃",
+      "title": "香港特別行政區經濟和社會發展第一個五年規劃（2026—2030年）全文（一）",
+      "url": "https://www.info.gov.hk/gia/general/202609/16/P2026091600126.htm",
+      "publisher": "香港特別行政區政府",
+      "claim": "國家綱要、香港本地五年部署及年度施政措施是不同層次的文件。",
+      "status": "本地規劃",
+      "location": "香港",
+      "verified_on": "2026-10-12"
+    },
+    {
+      "id": "hk_digital_education",
+      "name": "香港數字教育措施",
+      "title": "2026年施政報告第270段",
+      "url": "https://www.ird.gov.hk/chi/ppr/archives/26091605.htm",
+      "canonical_url": "https://www.info.gov.hk/gia/general/202609/16/P2026091600265p.htm",
+      "publisher": "香港特別行政區政府",
+      "claim": "2026年提出包含AI大語言模型的免費數字教育學習資源大平台，逐步拓展AI教學助理。這是香港措施，教室介面與機械人只是教學示意。",
+      "status": "計劃措施，非全部已落實",
+      "location": "香港",
+      "verified_on": "2026-10-12"
+    },
+    {
+      "id": "dongguan_phase1",
+      "name": "東莞空港中心時間表",
+      "title": "2026年施政報告第230段",
+      "url": "https://www.info.gov.hk/gia/general/202609/16/P2026091600263p.htm",
+      "supporting_url": "https://www.tlb.gov.hk/eng/legislative/transport/special/land/TLB-1-e1_2026.pdf",
+      "publisher": "香港特別行政區政府／運輸及物流局",
+      "claim": "第一期永久設施計劃2027年6月投入運作。已有海空聯運先導運作不能等同永久設施已完成。空港中心在東莞，貨物水運往香港國際機場，葵青碼頭是另一海運港口。",
+      "status": "官方時間表，待實施",
+      "location": "東莞及香港國際機場",
+      "verified_on": "2026-10-12"
+    },
+    {
+      "id": "dongguan_pilot",
+      "name": "已有海空聯運例子",
+      "title": "立法會八題：東莞─香港國際機場物流園",
+      "url": "https://www.info.gov.hk/gia/general/202407/03/P2024070300252p.htm",
+      "publisher": "香港特別行政區政府",
+      "claim": "海空聯運先導模式屬已有例子，與2027永久設施的計劃狀態分開。",
+      "status": "已有先導運作",
+      "location": "東莞及香港國際機場",
+      "verified_on": "2026-10-12"
+    },
+    {
+      "id": "polyu_change6",
+      "name": "理大嫦娥六號科研成果",
+      "title": "香港創科成就在世界舞台大展光芒，2024年7月15日",
+      "url": "https://www.info.gov.hk/gia/general/202407/15/P2024071500800.htm",
+      "publisher": "香港特別行政區政府／創新科技署",
+      "claim": "理大容啟亮教授團隊研製表取採樣執行裝置，協助嫦娥六號完成月球背面表土採樣。2024成果屬十五五以前的科研基礎，不能當2030新成果。",
+      "status": "2024已有成果",
+      "location": "理大科研；月球作模擬展示",
+      "verified_on": "2026-10-12"
+    },
+    {
+      "id": "lamma_history",
+      "name": "南丫風采歷史重現",
+      "title": "南丫風采發電站永久關閉通知，2026年5月11日",
+      "url": "https://www.hkelectric.com/sc/important-notice",
+      "notice_url": "https://www.hkelectric.com/sc/important-notice",
+      "publisher": "香港電燈有限公司",
+      "claim": "港燈正式通知：南丫風采由2026年5月11日起永久關閉。世界保留歷史風機教學重現，不能標成2030仍發電。",
+      "status": "歷史教學重現，非現時運轉",
+      "location": "南丫島大嶺",
+      "verified_on": "2026-10-12",
+      "supporting_url": "https://www.hkelectric.com/documents/en/MediaResources/PressReleases/Documents/20260325_pre_Decommissioning%20of%20Lamma%20Winds_web.pdf",
+      "data_endpoint_url": "https://hke-api01.azure-api.net/sitecore/hkei/important-notice?sc_device=json&sc_lang=zh-HK",
+      "verification": "2026-10-12讀取官方網站公開JSON內容，確認永久關閉生效日期。"
+    },
+    {
+      "id": "kwai_tsing",
+      "name": "葵青貨櫃碼頭布局",
+      "title": "香港國際貨櫃碼頭布局",
+      "url": "https://www.hit.com.hk/en/About-Hit/Terminal-Layout.html",
+      "publisher": "香港國際貨櫃碼頭有限公司",
+      "claim": "葵青為現有國際海運港口。1至8號在葵涌／昂船洲側，9號在青衣，兩岸中間保留藍巴勒海峽。智能及綠色升級示意不聲稱全部設備已落成。",
+      "status": "現有港口及願景示意",
+      "location": "葵涌、青衣",
+      "verified_on": "2026-10-12"
+    },
+    {
+      "id": "health_mainland",
+      "name": "內地縣域醫共體",
+      "title": "十五五綱要專欄16，印刷第93頁",
+      "url": "https://www.ndrc.gov.cn/fggz/fzzlgh/gjfzgh/202603/U020260317369114704096.pdf",
+      "publisher": "國家發展和改革委員會",
+      "claim": "規劃支持1000個緊密型縣域醫共體建設，共享檢查及藥品等資源。考察場景是內地縣域教學分區，不冒認香港醫療制度或指定縣城。",
+      "status": "規劃目標／教學示意",
+      "location": "中國內地，非香港",
+      "verified_on": "2026-10-12"
+    },
+    {
+      "id": "palace_museum",
+      "name": "香港故宮文化交流",
+      "title": "行政長官答問會開場發言，2022年7月6日",
+      "url": "https://www.info.gov.hk/gia/general/202207/06/P2022070600336.htm",
+      "publisher": "香港特別行政區政府",
+      "claim": "故宮文化博物館2022年向公眾開放，作已有文化交流例子。館藏與室內採教學示意，不冒認真實藏品或完整實景。",
+      "status": "2022已有基礎",
+      "location": "香港西九龍",
+      "verified_on": "2026-10-12"
+    },
+    {
+      "id": "landsd_3d",
+      "name": "地政總署三維地圖參考",
+      "title": "地政總署三維製圖及Open3Dhk",
+      "url": "https://www.landsd.gov.hk/tc/survey-mapping/mapping/3d-mapping.html",
+      "supporting_url": "https://3d.map.gov.hk/mapviewer/app/",
+      "publisher": "香港特別行政區政府地政總署",
+      "claim": "香港海岸、地標位置和建築外觀參考；本次另選取少量官方單體模型幾何作教學重建，沒有匯入政府完整三維城市。",
+      "status": "地理參考",
+      "location": "香港",
+      "verified_on": "2026-10-12"
+    },
+    {
+      "id": "landsd_selected_models",
+      "name": "選取的官方三維建築模型",
+      "title": "CSDI可視化三維地圖（單體化模型）",
+      "url": "https://portal.csdi.gov.hk/csdi-webpage/dataset/landsd_rcd_1671676915450_88604",
+      "publisher": "香港特別行政區政府地政總署／空間數據共享平台（CSDI）",
+      "claim": "只選取葵涌6號碼頭六個及尖沙咀海旁兩個完整建築模型包，另取國金二期候選模型的原始幾何；這是選定資料，並非全香港城市或完整碼頭模型。",
+      "status": "選定官方幾何／教學衍生模型",
+      "location": "葵涌、尖沙咀、中環",
+      "verified_on": "2026-10-12",
+      "extracted_on": "2026-10-12",
+      "data_revisions_hkt": {
+        "11-NW-6D": "2026-08-28",
+        "11-SW-5A": "2026-07-17",
+        "11-SW-8B": "2026-09-23"
+      },
+      "verification": "選定原檔保留逐檔雜湊及ZIP校驗；八個完整模型與一個僅幾何模型的二進制網格已核對。原資料修訂日依各圖幅列明，與查核及提取日分開。"
+    },
+    {
+      "id": "landsd_ifc_derivative",
+      "name": "國金候選模型的教學重建",
+      "title": "官方位置核對與國金候選幾何",
+      "url": "https://portal.csdi.gov.hk/csdi-webpage/apidoc/LocationSearchAPI",
+      "supporting_url": "https://portal.csdi.gov.hk/csdi-webpage/dataset/landsd_rcd_1671676915450_88604",
+      "publisher": "香港特別行政區政府地政總署／CSDI",
+      "claim": "模型按官方位置及高度輪廓推定為國際金融中心二期，沒有模型ID與建築名稱的正式對照。幾何經簡化，原有24張貼圖未取用；玻璃、屋頂及混凝土材質是新製教學材質。",
+      "status": "位置及外形推定／官方幾何衍生／新製材質",
+      "location": "中環",
+      "verified_on": "2026-10-12",
+      "source_model_id": "B344541627001063A0",
+      "source_data_revision_hkt": "2026-09-23",
+      "identity_status": "strong_geographic_inference_not_formal_id_name_join",
+      "verification": "候選模型根位置距地政總署國際金融中心二期地名點約4.06米；位置與高度輪廓相符不等同取得正式模型名稱對照。"
+    },
+    {
+      "id": "landsd_locations",
+      "name": "官方地標位置",
+      "title": "地政總署Location Search API",
+      "url": "https://portal.csdi.gov.hk/csdi-webpage/apidoc/LocationSearchAPI",
+      "publisher": "香港特別行政區政府地政總署／CSDI",
+      "claim": "HK1980地名及地址點用於相對方位和場景登記，不是建築網格或泊位測量中心。",
+      "status": "官方地理定位",
+      "location": "香港",
+      "verified_on": "2026-10-12"
+    },
+    {
+      "id": "csdi_topography",
+      "name": "香港海岸與地形",
+      "title": "香港1:50,000地形圖資料集",
+      "url": "https://portal.csdi.gov.hk/csdi-webpage/metadata/landsd_rcd_1637221775627_85634/html",
+      "publisher": "香港特別行政區政府地政總署／CSDI",
+      "claim": "海岸及等高線衍生場景。2米幾何簡化不等於2米測量精度。",
+      "status": "公開地理資料",
+      "location": "香港",
+      "verified_on": "2026-10-12"
+    },
+    {
+      "id": "csdi_terms",
+      "name": "地理資料使用條款",
+      "title": "CSDI使用條款",
+      "url": "https://portal.csdi.gov.hk/csdi-webpage/doc/TNC",
+      "publisher": "香港特別行政區政府／CSDI",
+      "claim": "第3節容許符合使用條款的免費商業及非商業下載、重製及分發，須清楚標明政府與CSDI來源及政府和相關機構的知識產權。第9節說明除另有註明外，內容知識產權屬政府。",
+      "status": "來源及權利聲明",
+      "location": "香港",
+      "verified_on": "2026-10-12"
+    },
+    {
+      "id": "landsd_transform",
+      "name": "官方坐標轉換",
+      "title": "地政總署Coordinates Transformation API",
+      "url": "https://www.geodetic.gov.hk/transform/tformAPI_manual.pdf",
+      "publisher": "香港特別行政區政府地政總署",
+      "claim": "地名HK1980坐標由官方API轉為WGS84供概覽地圖。坐標轉換不會提升原始資料精度，所有點均為教學場景定位。",
+      "status": "地理轉換參考",
+      "location": "香港",
+      "verified_on": "2026-10-12"
+    },
+    {
+      "id": "nasa_earth_texture",
+      "name": "地球表面貼圖",
+      "title": "NASA SVS Blue Marble",
+      "url": "https://svs.gsfc.nasa.gov/2915",
+      "publisher": "NASA/Goddard Scientific Visualization Studio",
+      "claim": "地球儀、共用螢幕和太空教學場景採用NASA Blue Marble原始影像作表面貼圖；動畫與場景由本項目另行製作。",
+      "status": "影像來源／教學模擬",
+      "location": "地球",
+      "verified_on": "2026-10-12"
+    },
+    {
+      "id": "nasa_moon_texture",
+      "name": "月球表面貼圖",
+      "title": "NASA SVS CGI Moon Kit",
+      "url": "https://svs.gsfc.nasa.gov/4720",
+      "publisher": "NASA Scientific Visualization Studio／LROC camera team",
+      "claim": "月球表面採用CGI Moon Kit的2K影像；這是適合視覺呈現的貼圖，教學星體大小與距離經調整，並非測量或真實任務影像。",
+      "status": "影像來源／教學模擬",
+      "location": "月球",
+      "verified_on": "2026-10-12"
+    },
+    {
+      "id": "polyu_surface_sampler",
+      "name": "香港理工大學表取採樣執行裝置",
+      "title": "用於嫦娥五號及六號月球採樣返回任務之表取採樣執行裝置",
+      "url": "https://www.polyu.edu.hk/kteo/knowledge-transfer/innovations-and-technologies/technology-search/award-winning/a202504_01/?sc_lang=tc",
+      "publisher": "香港理工大學",
+      "claim": "採樣器、近攝相機與初級封裝系統。教學動畫表現採樣、經漏斗倒入容器、密封及轉移；不把整個著陸器歸為理大研發。",
+      "status": "已有科研成果；動畫為教學重現",
+      "location": "香港理工大學實驗室教學模擬",
+      "verified_on": "2026-10-12"
+    },
+    {
+      "id": "polyu_identity",
+      "name": "香港理工大學校徽及名稱",
+      "title": "大學標誌",
+      "url": "https://www.polyu.edu.hk/tc/about-polyu/university-identity/",
+      "supporting_url": "https://itd-alliance.org/members-2/",
+      "publisher": "香港理工大學／ITD Alliance",
+      "claim": "校徽及中英文名稱用作識別展示的科研院校。實驗室是原創教學模擬，並非實際理大實驗室的複製或官方授權產品。",
+      "status": "院校識別",
+      "verified_on": "2026-10-12"
+    },
+    {
+      "id": "smart_agriculture",
+      "name": "十五五農業農村現代化",
+      "title": "以農業農村現代化扎實推進鄉村全面振興",
+      "url": "https://cpc.people.com.cn/BIG5/n1/2026/0603/c64387-40732883.html",
+      "publisher": "人民日報",
+      "claim": "2030年糧食綜合生產能力達到1.45萬億斤左右；農業科技、機械化及人工智能助力農村發展。",
+      "status": "2030規劃目標",
+      "location": "全國",
+      "sections": [
+        "農業農村現代化"
+      ]
+    },
+    {
+      "id": "dongguan_2026",
+      "name": "香港國際機場東莞空港中心",
+      "title": "東莞空港中心考察",
+      "url": "https://www.cepu.gov.hk/tc/events/20261006.html",
+      "publisher": "特首政策組",
+      "claim": "在東莞完成航空安檢、打板及收貨，再經保安海運接駁香港機場空側。",
+      "status": "官方案例",
+      "location": "東莞及香港",
+      "sections": [
+        "海空聯運"
+      ]
+    },
+    {
+      "id": "hk_healthcare_v11",
+      "name": "香港醫療發展",
+      "title": "香港醫療發展",
+      "url": "https://www.policyaddress.gov.hk/2026/tc/chapter7.html",
+      "publisher": "香港政府／香港科技大學",
+      "claim": "醫療政策、香港中醫醫院服務、中藥材標準及醫療創新；本場景為四區教學重現。",
+      "status": "官方資料 · 場景為教學示意",
+      "location": "香港",
+      "sections": [
+        "醫療健康"
+      ]
+    },
+    {
+      "id": "hkust_medicine_v11",
+      "name": "香港科技大學醫學院",
+      "title": "香港科技大學醫學院",
+      "url": "https://medicine.hkust.edu.hk/",
+      "publisher": "香港政府／香港科技大學",
+      "claim": "首屆預計2028／29入學；2030課堂與技能訓練為願景示意，非已畢業醫生。",
+      "status": "官方資料 · 場景為教學示意",
+      "location": "香港",
+      "sections": [
+        "醫療健康"
+      ]
+    },
+    {
+      "id": "cm_testing_v11",
+      "name": "政府中藥檢測中心",
+      "title": "政府中藥檢測中心",
+      "url": "https://www.info.gov.hk/gia/general/202512/10/P2025121000268.htm",
+      "publisher": "香港政府／香港科技大學",
+      "claim": "建立中藥參考標準及檢測方法，支援品質控制。",
+      "status": "官方資料 · 場景為教學示意",
+      "location": "香港",
+      "sections": [
+        "醫療健康"
+      ]
+    },
+    {
+      "id": "cmpr_v11",
+      "name": "香港藥物及醫療器械監督管理中心",
+      "title": "香港藥物及醫療器械監督管理中心",
+      "url": "https://www.info.gov.hk/gia/general/202609/23/P2026092300285.htm",
+      "publisher": "香港政府／香港科技大學",
+      "claim": "2026年內成立的公布安排；科學評估及監管流程作教學簡化。",
+      "status": "官方資料 · 場景為教學示意",
+      "location": "香港",
+      "sections": [
+        "醫療健康"
+      ]
+    },
+    {
+      "id": "clinical_trial_v11",
+      "name": "粵港澳大灣區國際臨床試驗所",
+      "title": "粵港澳大灣區國際臨床試驗所",
+      "url": "https://www.info.gov.hk/gia/general/202608/05/P2026080500248.htm",
+      "publisher": "香港政府／香港科技大學",
+      "claim": "協調臨床試驗資源與跨境合作，與科大醫學院為不同機構。",
+      "status": "官方資料 · 場景為教學示意",
+      "location": "香港",
+      "sections": [
+        "醫療健康"
+      ]
+    },
+    {
+      "id": "dhc_v11",
+      "name": "地區康健中心",
+      "title": "地區康健中心",
+      "url": "https://www.dhc.gov.hk/tc/",
+      "publisher": "香港政府／香港科技大學",
+      "claim": "健康推廣、風險評估及慢性疾病管理。",
+      "status": "官方資料 · 場景為教學示意",
+      "location": "香港",
+      "sections": [
+        "醫療健康"
+      ]
+    },
+    {
+      "id": "landsd_westk_map_v13",
+      "name": "地政總署地理資訊地圖",
+      "title": "西九文化區地圖",
+      "url": "https://www2.map.gov.hk/gm/map/search/keyword/%E8%A5%BF%E4%B9%9D%E6%96%87%E5%8C%96%E5%8D%80",
+      "publisher": "香港地政總署",
+      "claim": "文化區岸線及主要文化設施的位置關係參考；演講步行版本將場館間距收窄45%，以連接步道縮短遊覽路程，屬教學縮尺園區。",
+      "status": "官方地圖 · 位置關係參考"
+    },
+    {
+      "id": "ktn_museum_planning_v13",
+      "name": "古洞北國家發展和成就博物館規劃",
+      "title": "康文署轄下博物館的發展及規劃，立法會文件CB(3)957/2024(02)",
+      "url": "https://www.legco.gov.hk/yr2024/chinese/panels/ha/papers/ha20241209cb3-957-2-c.pdf",
+      "publisher": "文化體育及旅遊局",
+      "claim": "古洞北博物館籌劃、國家發展和成就的展示方向及教育設施；館址區域屬古洞北，建築外觀、展品及六個主題配置為本作品的概念設計。",
+      "status": "公布規劃 · 開館日期待定"
+    },
+    {
+      "id": "westk_pac_v13",
+      "name": "西九演藝中心",
+      "title": "WestK Performing Arts Season 25–26及2026年更新",
+      "url": "https://www.westk.hk/en/venue/westk-performing-arts-centre",
+      "publisher": "西九文化區管理局",
+      "claim": "預計2027年開幕；設大劇院、中劇場、小劇場及The Hall。文化區整體活動及觀眾目標按使用者提供的政策資料標示。",
+      "status": "公布計劃"
+    },
+    {
+      "id": "tripo_culture_models_v13",
+      "name": "Tripo文化設施模型",
+      "title": "使用Tripo Studio生成的建築、園區及展品",
+      "url": "https://studio.tripo3d.ai/zh/assets",
+      "publisher": "Tripo Studio / 本作品",
+      "claim": "十個原始Tripo模型，保留UV和PBR貼圖，經網頁減面及建築比例整理。新館是原創概念；現有設施是教學重現。",
+      "status": "教學模型，非官方建築設計"
+    },
+    {
+      "id": "solar_textures",
+      "name": "Solar System Scope 行星貼圖",
+      "title": "行星、太陽與銀河星空貼圖",
+      "url": "https://sunaeon.solarsystemscope.com/textures/",
+      "publisher": "Solar System Scope / INOVE",
+      "claim": "行星貼圖以太空影像及地形資料製作；部分區域補繪。場景大小、距離與時間為教學調整。",
+      "status": "CC BY 4.0"
+    },
+    {
+      "id": "landsat_model",
+      "name": "NASA Landsat 3D 模型",
+      "title": "Landsat 1, 2, and 3",
+      "url": "https://science.nasa.gov/3d-resources/landsat-1-2-and-3/",
+      "publisher": "NASA / Ross K. Walter",
+      "claim": "衛星使用 NASA 公開原始網格、UV 與法線貼圖；僅為網頁呈現調整比例與材質。",
+      "status": "公開模型"
+    },
+    {
+      "id": "lunar_instruments",
+      "name": "理大月球採樣儀器",
+      "title": "嫦娥六號採樣儀器",
+      "url": "https://www.polyu.edu.hk/pair/news-and-events/news/2024/20240607-polyu-develops-and-manufactures-space-instruments-for-the-nations-change6/",
+      "publisher": "香港理工大學",
+      "claim": "機械臂末端採樣、近距離相機與裝填系統的原理參考；著陸器、鑽取及動畫為原創教學示意。",
+      "status": "教學重現"
+    },
+    {
+      "id": "chair_activity",
+      "name": "衞生署長者健康服務",
+      "title": "長者椅上體能活動資料",
+      "url": "https://www.elderly.gov.hk/tc_chi/health_information/fightvirus/physical_activity.html",
+      "publisher": "衞生署",
+      "claim": "簡報與同步椅上動作為原創教學動畫，參考長者健康服務的體能活動主題。",
+      "status": "教學示意"
+    },
+    {
+      "id": "hplc_chemical_marker_analysis",
+      "name": "政府中藥檢測中心",
+      "title": "中藥複方顆粒的化學指標成分分析",
+      "url": "https://www.cmro.gov.hk/html/b5/useful_information/gcmti/research/testing_methods/analysis_of_chemical_markers.html",
+      "publisher": "衞生署中醫藥規管辦公室",
+      "claim": "高效液相色譜／超高效液相色譜配合二極管陣列技術用於中藥指標成分分析；場景儀器與色譜結果為教學重現。"
+    },
+    {
+      "id": "physical_examination",
+      "name": "MedlinePlus 身體檢查",
+      "title": "Physical examination",
+      "url": "https://medlineplus.gov/ency/article/002274.htm",
+      "publisher": "U.S. National Library of Medicine",
+      "claim": "床邊檢查以聽診與觸診為教學重現；動畫加速及手指訊號均為示意。",
+      "status": "公開教學參考"
+    },
+    {
+      "id": "hkia_landsd_layout",
+      "name": "香港國際機場地理輪廓",
+      "title": "地政總署 CSDI iB50000 海岸線、跑道邊界及建築輪廓",
+      "url": "https://www.map.gov.hk/gm/map/",
+      "publisher": "地政總署／CSDI",
+      "verified_on": "2026-10-13",
+      "claim": "官方矢量經緯度按東、北方向縮放為教學場景；高度非官方測量，東北海岸缺段以示意連線補合。"
+    },
+    {
+      "id": "hkia_cad_layout",
+      "name": "香港國際機場三跑道布局",
+      "title": "AIP AD2-VHHH-ADC-1 Aerodrome Layout",
+      "url": "https://www.ais.gov.hk/eaip_20260903/2026-08-06-000000/pdf/VH-AD-2-VHHH-ADC-1.pdf",
+      "publisher": "香港民航處",
+      "verified_on": "2026-10-13",
+      "claim": "三條跑道的相對位置、方向及編號；場景比例為教學調整。"
+    },
+    {
+      "id": "hkia_sea_air_vehicles",
+      "name": "海空聯運及自動貨運",
+      "title": "機管局與東莞港務集團簽署發展東莞空港中心協議",
+      "url": "https://www.hongkongairport.com/en/media-centre/press-release/2023/pr_1685",
+      "publisher": "香港機場管理局",
+      "verified_on": "2026-10-13",
+      "claim": "上游安檢、打板、航空公司收貨、保安船舶及自主導引車；Tripo 模型為教學重現。"
+    },
+    {
+      "id": "hkcc_waterfront_scenery",
+      "name": "香港文化中心位置圖及官方相片集",
+      "title": "香港文化中心海濱場景參考",
+      "url": "https://www.hkculturalcentre.gov.hk/en/hkcc/common/b5/hiring/files/HKCC%20Site%20Map%20%28Jun%202024%29.pdf",
+      "publisher": "康樂及文化事務署",
+      "claim": "文化中心、鐘樓、藝術館及星光大道的相對方位參考官方位置圖；距離、比例及建築細節為背景教學重現。",
+      "status": "背景場景",
+      "location": "尖沙咀海濱",
+      "verified_on": "2026-10-13"
+    },
+    {
+      "id": "aos_waterfront_scenery",
+      "name": "星光大道官方網站",
+      "title": "星光大道海濱及園境參考",
+      "url": "https://www.avenueofstars.com.hk/",
+      "publisher": "星光大道管理有限公司",
+      "claim": "星光大道海濱、欄杆及園境元素的背景示意；不新增遊覽站點。",
+      "status": "背景場景",
+      "location": "尖沙咀海濱",
+      "verified_on": "2026-10-13"
+    },
+    {
+      "id": "hkpm_refined_exterior",
+      "name": "香港故宮文化博物館建築介紹",
+      "title": "香港故宮文化博物館外觀重現參考",
+      "url": "https://www.hkpm.org.hk/en/about/the-building",
+      "publisher": "香港故宮文化博物館",
+      "claim": "外觀依使用者提供的實景相片及館方建築介紹重現；改善金色量體、橫向立面、中庭玻璃和入口。屬教學模型，比例與細節經調整。",
+      "status": "現有地標・教學重現",
+      "location": "西九文化區",
+      "verified_on": "2026-10-13"
+    },
+    {
+      "id": "freespace_reference",
+      "name": "自由空間官方通達指南",
+      "title": "自由空間通達指南（2025年10月）",
+      "url": "https://webmedia.westkowloon.hk/documents/Access-Guide-202510_Freespace_TC_FINAL_tagged.pdf",
+      "publisher": "西九文化區管理局",
+      "claim": "自由空間在藝術公園的設施位置與外觀參考。紅色斜招牌、灰色混凝土及紅銅入口亦參考用戶提供的實景相片。",
+      "status": "官方場地資料及相片參考",
+      "verified_on": "2026-10-13"
+    },
+    {
+      "id": "mplus_building_reference",
+      "name": "M+大樓的設計",
+      "title": "M+官方建築設計說明",
+      "url": "https://www.mplus.org.hk/tc/the-building/design/",
+      "publisher": "M+",
+      "claim": "窄長縱向大樓、懸挑基座平台、深綠色陶瓦與面海LED幕牆。外型亦參考用戶提供的實景相片；屏幕標題為用戶要求的教學場景內容。",
+      "verified_on": "2026-10-13"
+    },
+    {
+      "id": "museum_media_mao",
+      "name": "Mao proclaiming establishment of PRC.jpg",
+      "title": "Mao proclaiming establishment of PRC.jpg",
+      "url": "https://commons.wikimedia.org/wiki/File:Mao_proclaiming_establishment_of_PRC.jpg",
+      "publisher": "Unknown authorUnknown author",
+      "claim": "Public domain；保留原圖比例，展板文字置於圖片外。",
+      "status": "展區圖片來源",
+      "location": "國家發展和成就博物館",
+      "verified_on": "2026-10-13"
+    },
+    {
+      "id": "museum_media_bridge",
+      "name": "Chinese and Soviet engineers on the Wuhan Yangtze River Bridge.jpg",
+      "title": "Chinese and Soviet engineers on the Wuhan Yangtze River Bridge.jpg",
+      "url": "https://commons.wikimedia.org/wiki/File:Chinese_and_Soviet_engineers_on_the_Wuhan_Yangtze_River_Bridge.jpg",
+      "publisher": "Unknown authorUnknown author",
+      "claim": "Public domain；保留原圖比例，展板文字置於圖片外。",
+      "status": "展區圖片來源",
+      "location": "國家發展和成就博物館",
+      "verified_on": "2026-10-13"
+    },
+    {
+      "id": "museum_media_opera",
+      "name": "Cantonese Opera Happy Valley (2483422786).jpg",
+      "title": "Cantonese Opera Happy Valley (2483422786).jpg",
+      "url": "https://commons.wikimedia.org/wiki/File:Cantonese_Opera_Happy_Valley_(2483422786).jpg",
+      "publisher": "Jo Schmaltz from Hongkong, Hongkong",
+      "claim": "CC BY-SA 2.0；保留原圖比例，展板文字置於圖片外。",
+      "status": "展區圖片來源",
+      "location": "國家發展和成就博物館",
+      "verified_on": "2026-10-13"
+    },
+    {
+      "id": "museum_media_bianlian",
+      "name": "Bian lian.jpg",
+      "title": "Bian lian.jpg",
+      "url": "https://commons.wikimedia.org/wiki/File:Bian_lian.jpg",
+      "publisher": "行人三",
+      "claim": "CC BY 2.5 cn；保留原圖比例，展板文字置於圖片外。",
+      "status": "展區圖片來源",
+      "location": "國家發展和成就博物館",
+      "verified_on": "2026-10-13"
+    },
+    {
+      "id": "museum_media_cargo",
+      "name": "B-LIE, Boeing 747-400ERF of Cathay Pacific Cargo at Hong Kong International Airport, 2018.jpg",
+      "title": "B-LIE, Boeing 747-400ERF of Cathay Pacific Cargo at Hong Kong International Airport, 2018.jpg",
+      "url": "https://commons.wikimedia.org/wiki/File:B-LIE,_Boeing_747-400ERF_of_Cathay_Pacific_Cargo_at_Hong_Kong_International_Airport,_2018.jpg",
+      "publisher": "Flying horse love",
+      "claim": "CC BY-SA 4.0；保留原圖比例，展板文字置於圖片外。",
+      "status": "展區圖片來源",
+      "location": "國家發展和成就博物館",
+      "verified_on": "2026-10-13"
+    },
+    {
+      "id": "museum_media_train",
+      "name": "CR400AF-BZ Train on Xuzhou-Lanzhou High Speed Railway Xianyang Section, Jan 4 2023.jpg",
+      "title": "CR400AF-BZ Train on Xuzhou-Lanzhou High Speed Railway Xianyang Section, Jan 4 2023.jpg",
+      "url": "https://commons.wikimedia.org/wiki/File:CR400AF-BZ_Train_on_Xuzhou-Lanzhou_High_Speed_Railway_Xianyang_Section,_Jan_4_2023.jpg",
+      "publisher": "P. K. Koo",
+      "claim": "CC BY-SA 4.0；保留原圖比例，展板文字置於圖片外。",
+      "status": "展區圖片來源",
+      "location": "國家發展和成就博物館",
+      "verified_on": "2026-10-13"
+    },
+    {
+      "id": "westk_architecture_v39",
+      "name": "西九演藝中心官方設計",
+      "url": "https://www.unstudio.com/projects/westk-perfomring-arts-centre/",
+      "publisher": "UNStudio",
+      "claim": "玻璃大堂、露台、連貫黑色外殼；教學建築重建參考",
+      "title": "西九演藝中心官方設計",
+      "status": "官方資料",
+      "location": "國家成就館／西九文化區",
+      "verified_on": "2026-10-13"
+    },
+    {
+      "id": "westk_legco_v39",
+      "name": "演藝綜合劇場政府提交立法會圖則",
+      "url": "https://www.legco.gov.hk/yr15-16/chinese/panels/wkcd/papers/wkcd20160621cb2-1766-1-c.pdf",
+      "publisher": "西九文化區管理局／立法會",
+      "claim": "大型玻璃外牆、戶外平台及三個劇場的立體布局",
+      "title": "演藝綜合劇場政府提交立法會圖則",
+      "status": "官方資料",
+      "location": "國家成就館／西九文化區",
+      "verified_on": "2026-10-13"
+    },
+    {
+      "id": "tiangong_v39",
+      "name": "天宮太空站設計與應用",
+      "url": "https://www.cnsa.gov.cn/n6758823/n6758838/c10087703/content.html",
+      "publisher": "國家航天局",
+      "claim": "天和、問天、夢天組成 T 字構型，研究與科研應用",
+      "title": "天宮太空站設計與應用",
+      "status": "官方資料",
+      "location": "國家成就館／西九文化區",
+      "verified_on": "2026-10-13"
+    },
+    {
+      "id": "hk_astronaut_v39",
+      "name": "香港載荷專家參與神舟二十三號任務",
+      "url": "https://www.info.gov.hk/gia/general/202605/23/P2026052300865.htm",
+      "publisher": "香港特區政府",
+      "claim": "黎家盈博士、首位香港航天員及載荷專家介紹",
+      "title": "香港載荷專家參與神舟二十三號任務",
+      "status": "官方資料",
+      "location": "國家成就館／西九文化區",
+      "verified_on": "2026-10-13"
+    },
+    {
+      "id": "china_sports_v39",
+      "name": "中國代表團巴黎 2024 賽績",
+      "url": "https://2024.olympic.cn/china/2024/0812/617045.html",
+      "publisher": "中國奧委會",
+      "claim": "40金、27銀、24銅，共91面獎牌",
+      "title": "中國代表團巴黎 2024 賽績",
+      "status": "官方資料",
+      "location": "國家成就館／西九文化區",
+      "verified_on": "2026-10-13"
+    },
+    {
+      "id": "hk_sports_v39",
+      "name": "中國香港代表團巴黎 2024 賽績",
+      "url": "https://www.info.gov.hk/gia/general/202408/21/P2024082000484.htm",
+      "publisher": "香港特區政府",
+      "claim": "2金、2銅；劍擊與游泳",
+      "title": "中國香港代表團巴黎 2024 賽績",
+      "status": "官方資料",
+      "location": "國家成就館／西九文化區",
+      "verified_on": "2026-10-13"
+    }
+  ],
+  "display_notes": [
+    "五年時間帶為2026、2027、2028、2029、2030。各年願景演示不是官方逐年工期。",
+    "2018大橋、2022故宮及2024嫦娥六號為已有基礎，沒有當作十五五新建成果。",
+    "香港場景按地理方位設計，遠距離以考察交通過場。內地醫療與庫布齊屬獨立分區。",
+    "南丫風采為歷史教學重現，現有太陽能使用港燈2026年公開資料。",
+    "官方三維資料僅選取八個完整建築模型包及一個國金候選幾何模型；新製教學材質不是官方原始貼圖，沒有匯入整套香港三維城市。",
+    "太空VR為可環顧及操作的教學模擬；不代表實際太空任務，星體距離及比例為觀看而調整。",
+    "香港社區健康服務採用緊湊的四區教學佈局：範圍由 50 × 44 米調整至 42 × 34 米，人物與醫療設備維持原有比例。"
+  ],
+  "credits": [
+    "資料來源：香港特別行政區政府地政總署／空間數據共享平台（CSDI）；查核及提取日期：2026年10月12日。香港特別行政區政府及相關機構擁有原資料的知識產權。本場景如經簡化，屬教學重建，非測量或政府產品。",
+    "公開政策資料由各官方發布機構提供。3D模型與互動是教學重現，非工程、測量或政府產品實際介面。",
+    "地球表面影像：NASA/Goddard Space Flight Center Scientific Visualization Studio；Blue Marble資料：Reto Stockli (NASA/GSFC)。月球影像：NASA Scientific Visualization Studio／LROC camera team at Arizona State University。來源署名只指原始貼圖；教學動畫與場景為本項目製作，並非NASA製作或認可。",
+    "China location map.svg | Milenioscuro | CC BY-SA 3.0 | Resized to fit exhibition panel; captions outside image",
+    "Mao proclaiming establishment of PRC.jpg | Unknown authorUnknown author | Public domain | Resized to fit exhibition panel; captions outside image",
+    "Chinese and Soviet engineers on the Wuhan Yangtze River Bridge.jpg | Unknown authorUnknown author | Public domain | Resized to fit exhibition panel; captions outside image",
+    "Cantonese Opera Happy Valley (2483422786).jpg | Jo Schmaltz from Hongkong, Hongkong | CC BY-SA 2.0 | Resized to fit exhibition panel; captions outside image",
+    "Bian lian.jpg | 行人三 | CC BY 2.5 cn | Resized to fit exhibition panel; captions outside image",
+    "B-LIE, Boeing 747-400ERF of Cathay Pacific Cargo at Hong Kong International Airport, 2018.jpg | Flying horse love | CC BY-SA 4.0 | Resized to fit exhibition panel; captions outside image",
+    "CR400AF-BZ Train on Xuzhou-Lanzhou High Speed Railway Xianyang Section, Jan 4 2023.jpg | P. K. Koo | CC BY-SA 4.0 | Resized to fit exhibition panel; captions outside image",
+    "Tiangong 1.svg | Tiangong_1_drawing.png: Craigboy\nderivative work: 70.49.127.65\nVectorized by Waterced | CC BY-SA 3.0 | Resized to fit exhibition panel; captions outside image"
+  ],
+  "privacy_scope": "僅公開政策、地理來源和教學說明，沒有私人帳戶、密碼、學校或學生個人資料。",
+  "v9_lab_media": {
+    "movie": "Original 24-second Unity-rendered surface sampling teaching animation; packed in the same startup data, decoded from a local blob URL.",
+    "models": "Existing real Tripo humans and robot; authored lab coats, goggles, animations, instruments, room and sampler reconstruction; precision open funnel and hollow sample can created in Blender.",
+    "researchResults": "Animated readings are teaching examples, not measured lunar material results."
+  },
+  "v10_aircargo": {
+    "title": "香港國際機場東莞空港中心",
+    "urls": [
+      "https://www.cepu.gov.hk/tc/events/20261006.html",
+      "https://www.hongkongairport.com/tc/media-centre/press-release/2023/pr_1685",
+      "https://www.cad.gov.hk/reports/an2023-2024/html/en/ch8.html"
+    ],
+    "note": "東莞完成安檢、打板及收貨，保安海運直達香港機場空側；無人運貨車已有官方案例。壓縮地理場景、機械人協作、海關與安檢動作為教學示意。"
+  },
+  "v10_smart_farm": {
+    "title": "中國智能農村與農業",
+    "url": "https://cpc.people.com.cn/BIG5/n1/2026/0603/c64387-40732883.html",
+    "target": "到2030年糧食綜合生產能力達到1.45萬億斤左右",
+    "note": "內地農村教學示意，非南丫島地理重現；設備運作、氣象與土壤數據為模擬。"
+  },
+  "compact_west_kowloon": {
+    "campusScale": 0.55,
+    "walkingPathWidthMetres": 3.4,
+    "peopleAndPetsOriginalSize": true,
+    "guideStops": 6,
+    "purpose": "演講期間自由步行遊覽",
+    "layout": "緊湊教學園區"
+  },
+  "museum_v32": {
+    "design": "古洞北國家發展和成就博物館教學概念設計，非已建成館舍重現",
+    "assets": [
+      {
+        "key": "basic_law",
+        "provider": "Tripo H3.1",
+        "modelId": "bd23cdb2-1bc1-4c9c-ab7a-8f3ce9b6fb93",
+        "url": "https://studio.tripo3d.ai/zh/workspace/generate/one-highly-detailed-realistic-red-hardcover-law-book-museum-teaching-o-bd23cdb2-1bc1-4c9c-ab7a-8f3ce9b6fb93",
+        "originalSha256": "cbbe1758625156e131d5c46a067bdeca8abad5116e94345bb3ce403fec3384ff",
+        "runtimeTriangles": 26000
+      },
+      {
+        "key": "heritage_ding",
+        "provider": "Tripo H3.1",
+        "modelId": "70182585-ae6d-4afb-a6be-f6de61fd79a1",
+        "url": "https://studio.tripo3d.ai/zh/workspace/generate/one-authentic-looking-ancient-chinese-bronze-ding-ritual-vessel-as-a-m-70182585-ae6d-4afb-a6be-f6de61fd79a1",
+        "originalSha256": "65c4155fc3b113114fb4c3f5f00fb2cab6d1b9a473da544b41da03dd60519cc9",
+        "runtimeTriangles": 26000
+      },
+      {
+        "key": "history_train",
+        "provider": "Tripo H3.1",
+        "modelId": "026f8e40-0168-420e-91dd-9f1cafa728d5",
+        "url": "https://studio.tripo3d.ai/zh/workspace/generate/one-highly-detailed-museum-miniature-of-a-modern-chinese-high-speed-pa-026f8e40-0168-420e-91dd-9f1cafa728d5",
+        "originalSha256": "b076a66a244e64a6705e4a06ebfa84c36bc967386f0473475fe8d31471ae7878",
+        "runtimeTriangles": 26000
+      },
+      {
+        "key": "hk_port",
+        "provider": "Tripo H3.1",
+        "modelId": "3d5d8771-3c3a-4a25-acd2-27443bfd5bde",
+        "url": "https://studio.tripo3d.ai/zh/workspace/generate/one-detailed-tabletop-diorama-of-hong-kong-harbour-trade-and-city-part-3d5d8771-3c3a-4a25-acd2-27443bfd5bde",
+        "originalSha256": "1e9fddc61e54e060a0eeaf6b103f624616f231a81e3817bfad8673bbcc10787f",
+        "runtimeTriangles": 26000
+      },
+      {
+        "key": "museum_building",
+        "provider": "Tripo H3.1",
+        "modelId": "e4aeb9f0-7163-4a41-9357-ff033408baf1",
+        "url": "https://studio.tripo3d.ai/zh/workspace/generate/one-compact-contemporary-national-development-and-achievements-museum-e4aeb9f0-7163-4a41-9357-ff033408baf1",
+        "originalSha256": "9eb4ca8202eafcd3c2836068899891ffda89960107275d294c60ec09c59c63e2",
+        "runtimeTriangles": 44995
+      },
+      {
+        "key": "sports_trophy",
+        "provider": "Tripo H3.1",
+        "modelId": "a091db92-9f59-4520-bfa0-e5189ccb5f7d",
+        "url": "https://studio.tripo3d.ai/zh/workspace/generate/one-elegant-detailed-golden-sports-achievement-trophy-museum-object-a-a091db92-9f59-4520-bfa0-e5189ccb5f7d",
+        "originalSha256": "c60433c340c37f244765ac047159623a625ae9cc014d874213c276b4e056389e",
+        "runtimeTriangles": 25999
+      },
+      {
+        "key": "technology_rocket",
+        "provider": "Tripo H3.1",
+        "modelId": "46b51cba-620e-4a4b-a0c7-20b01a524ffe",
+        "url": "https://studio.tripo3d.ai/zh/workspace/generate/one-realistic-detailed-chinese-spaceflight-launch-vehicle-museum-model-46b51cba-620e-4a4b-a0c7-20b01a524ffe",
+        "originalSha256": "a1861fbd0d185acccd14fae343cd6eda741f9ad425ac7c81ad4bf7aa049e17e8",
+        "runtimeTriangles": 25999
+      }
+    ],
+    "interior": "36 × 28米、六個緊湊展區，完整地板、牆壁和天花；步行穿過門口進出獨立封閉室內場景",
+    "students": "六位既有Tripo校服學生，使用原生步行與站立動畫，在館內輪流走訪展品",
+    "themes": [
+      "歷史",
+      "科技",
+      "體育",
+      "文化",
+      "香港角色",
+      "一國兩制"
+    ]
+  },
+  "museum_exhibition_media_v33": [
+    {
+      "key": "mao",
+      "title": "Mao proclaiming establishment of PRC.jpg",
+      "url": "https://commons.wikimedia.org/wiki/File:Mao_proclaiming_establishment_of_PRC.jpg",
+      "author": "Unknown authorUnknown author",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "date": "1949-10-01",
+      "sourceImage": "https://upload.wikimedia.org/wikipedia/commons/1/12/Mao_proclaiming_establishment_of_PRC.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "changes": "Resized to fit exhibition panel; captions outside image"
+    },
+    {
+      "key": "bridge",
+      "title": "Chinese and Soviet engineers on the Wuhan Yangtze River Bridge.jpg",
+      "url": "https://commons.wikimedia.org/wiki/File:Chinese_and_Soviet_engineers_on_the_Wuhan_Yangtze_River_Bridge.jpg",
+      "author": "Unknown authorUnknown author",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "date": "1957",
+      "sourceImage": "https://upload.wikimedia.org/wikipedia/commons/7/7a/Chinese_and_Soviet_engineers_on_the_Wuhan_Yangtze_River_Bridge.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "changes": "Resized to fit exhibition panel; captions outside image"
+    },
+    {
+      "key": "opera",
+      "title": "Cantonese Opera Happy Valley (2483422786).jpg",
+      "url": "https://commons.wikimedia.org/wiki/File:Cantonese_Opera_Happy_Valley_(2483422786).jpg",
+      "author": "Jo Schmaltz from Hongkong, Hongkong",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "date": "2008-05-11 22:17",
+      "sourceImage": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/Cantonese_Opera_Happy_Valley_%282483422786%29.jpg/1280px-Cantonese_Opera_Happy_Valley_%282483422786%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "changes": "Resized to fit exhibition panel; captions outside image"
+    },
+    {
+      "key": "bianlian",
+      "title": "Bian lian.jpg",
+      "url": "https://commons.wikimedia.org/wiki/File:Bian_lian.jpg",
+      "author": "行人三",
+      "license": "CC BY 2.5 cn",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.5/cn/deed.en",
+      "date": "",
+      "sourceImage": "https://upload.wikimedia.org/wikipedia/commons/6/63/Bian_lian.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "changes": "Resized to fit exhibition panel; captions outside image"
+    },
+    {
+      "key": "cargo",
+      "title": "B-LIE, Boeing 747-400ERF of Cathay Pacific Cargo at Hong Kong International Airport, 2018.jpg",
+      "url": "https://commons.wikimedia.org/wiki/File:B-LIE,_Boeing_747-400ERF_of_Cathay_Pacific_Cargo_at_Hong_Kong_International_Airport,_2018.jpg",
+      "author": "Flying horse love",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "date": "2018-02-14 14:22:11",
+      "sourceImage": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5b/B-LIE%2C_Boeing_747-400ERF_of_Cathay_Pacific_Cargo_at_Hong_Kong_International_Airport%2C_2018.jpg/1280px-B-LIE%2C_Boeing_747-400ERF_of_Cathay_Pacific_Cargo_at_Hong_Kong_International_Airport%2C_2018.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "changes": "Resized to fit exhibition panel; captions outside image"
+    },
+    {
+      "key": "train",
+      "title": "CR400AF-BZ Train on Xuzhou-Lanzhou High Speed Railway Xianyang Section, Jan 4 2023.jpg",
+      "url": "https://commons.wikimedia.org/wiki/File:CR400AF-BZ_Train_on_Xuzhou-Lanzhou_High_Speed_Railway_Xianyang_Section,_Jan_4_2023.jpg",
+      "author": "P. K. Koo",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "date": "2024-01-04 16:41:59",
+      "sourceImage": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b6/CR400AF-BZ_Train_on_Xuzhou-Lanzhou_High_Speed_Railway_Xianyang_Section%2C_Jan_4_2023.jpg/1280px-CR400AF-BZ_Train_on_Xuzhou-Lanzhou_High_Speed_Railway_Xianyang_Section%2C_Jan_4_2023.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "changes": "Resized to fit exhibition panel; captions outside image"
+    }
+  ],
+  "museum_media_v39": {
+    "map": "User supplied colour provincial China map",
+    "meeting": "User supplied replacement photograph",
+    "station": "User supplied Tiangong station image",
+    "crew": "User supplied cabin group photograph; not identified as Lai Ka Ying portrait",
+    "sports": "Five supplied sport photographs; no unsupported event or identity attribution",
+    "method": "Original photographs letterboxed at original aspect ratio; explanatory text added outside photographs"
+  }
+}

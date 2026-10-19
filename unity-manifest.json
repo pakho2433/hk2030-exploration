@@ -1,0 +1,208 @@
+{
+  "version": "hk2030-unity-v40-compact-westk-fast-walk",
+  "scene": "HK2030EducationWalkV40",
+  "preloadsAllStops": true,
+  "loaderUrl": "/unity/v6-e1b03a6f10195308/Build/game.loader.js",
+  "config": {
+    "dataUrl": "/unity/v6-e1b03a6f10195308/Build/game.data.gz",
+    "frameworkUrl": "/unity/v6-e1b03a6f10195308/Build/game.framework.js.gz",
+    "codeUrl": "/unity/v6-e1b03a6f10195308/Build/game.wasm.gz",
+    "streamingAssetsUrl": "/unity/v6-e1b03a6f10195308/StreamingAssets",
+    "companyName": "Hong Kong School Learning",
+    "productName": "HK2030 Exploration",
+    "productVersion": "4.6",
+    "devicePixelRatio": 1,
+    "matchWebGLToCanvasSize": true
+  },
+  "bridgeObject": "HK2030Bridge",
+  "stateEvent": "hk2030-state",
+  "stops": [
+    "harbour",
+    "classroom",
+    "polyu",
+    "community",
+    "kwai",
+    "lamma",
+    "culture",
+    "museum"
+  ],
+  "dataBytes": 217885253,
+  "dataSha256": "19c86226c5acea48603a7aaf5ddcad8cd5b5368a1510a0f001ef1cd8ba329f39",
+  "dataCompressedBytes": 194612344,
+  "codeCompressedBytes": 6469841,
+  "frameworkCompressedBytes": 83664,
+  "textureVariants": {
+    "astc": {
+      "dataUrl": "/unity/v6-e1b03a6f10195308/Build/game.astc.data.gz",
+      "dataBytes": 201803575,
+      "dataSha256": "749b772fb3f591ca3858e73796954194ea287ba013d83f70af418ba15d5b8e37",
+      "dataCompressedBytes": 186232886,
+      "dataCompressedSha256": "3def67f7c86a5665ea97099e2bd045e2f547e09c7584e55eb46278141e97c8d3"
+    }
+  },
+  "runtimeId": "e1b03a6f10195308",
+  "runtimeSha256": "e1b03a6f10195308a2194557c10e2f5e2d661b463cffe74fcbf0b1404477d41f",
+  "runtimeHashOrder": [
+    "loader",
+    "data",
+    "astcData",
+    "framework",
+    "code"
+  ],
+  "dataCompressedSha256": "de40d3815a23370c4e03ee548537c50ac048573612d8fb0828b883ee05ba2067",
+  "frameworkCompressedSha256": "07e79a4f0719f4cdf072d4f9a0bd788a62cd3dc2068114515c040bf2fd564cdc",
+  "codeCompressedSha256": "a09303aa98ba5adf1d3835bfe746098cf8787dcbb1ccc0030b443bd4191f2b5e",
+  "loaderIntegrity": {
+    "bytes": 26982,
+    "sha256": "2e2b1b613ed68d549ba3d5dc1b99ea0bf47c16a4a93d0f9d9fbfb3b3318ce813"
+  },
+  "frameworkIntegrity": {
+    "bytes": 389767,
+    "sha256": "d14d78ed85b47f8082a1f5bbb2e832fc0738b23ec44bb554ccff684e739212b0"
+  },
+  "codeIntegrity": {
+    "bytes": 20391644,
+    "sha256": "4fc69f243f683ffcb01a6293e514f18407acd50a87a3d40b4f0db64502151d83"
+  },
+  "nativeFiles": [
+    {
+      "url": "/unity/v6-e1b03a6f10195308/Build/game.loader.js",
+      "bytes": 26982,
+      "sha256": "2e2b1b613ed68d549ba3d5dc1b99ea0bf47c16a4a93d0f9d9fbfb3b3318ce813",
+      "encoding": "identity"
+    },
+    {
+      "url": "/unity/v6-e1b03a6f10195308/Build/game.data.gz",
+      "bytes": 194612344,
+      "sha256": "de40d3815a23370c4e03ee548537c50ac048573612d8fb0828b883ee05ba2067",
+      "encoding": "gzip"
+    },
+    {
+      "url": "/unity/v6-e1b03a6f10195308/Build/game.astc.data.gz",
+      "bytes": 186232886,
+      "sha256": "3def67f7c86a5665ea97099e2bd045e2f547e09c7584e55eb46278141e97c8d3",
+      "encoding": "gzip"
+    },
+    {
+      "url": "/unity/v6-e1b03a6f10195308/Build/game.framework.js.gz",
+      "bytes": 83664,
+      "sha256": "07e79a4f0719f4cdf072d4f9a0bd788a62cd3dc2068114515c040bf2fd564cdc",
+      "encoding": "gzip"
+    },
+    {
+      "url": "/unity/v6-e1b03a6f10195308/Build/game.wasm.gz",
+      "bytes": 6469841,
+      "sha256": "a09303aa98ba5adf1d3835bfe746098cf8787dcbb1ccc0030b443bd4191f2b5e",
+      "encoding": "gzip"
+    }
+  ],
+  "buildAudits": {
+    "generic": {
+      "result": "Succeeded",
+      "errors": 0,
+      "warnings": 8,
+      "subtarget": "Generic",
+      "scene": "Assets/Scenes/HK2030EducationWalkV40.unity",
+      "started": "2026-10-13T09:49:54.8723199",
+      "ended": "2026-10-13T09:51:24.2615785",
+      "auditSha256": "29b5d07b6c6f4714c60cc3616f4ecc7cc8f127adbda53926b5f167067aae2e2f"
+    },
+    "astc": {
+      "result": "Succeeded",
+      "errors": 0,
+      "warnings": 1,
+      "subtarget": "ASTC",
+      "scene": "Assets/Scenes/HK2030EducationWalkV40.unity",
+      "started": "2026-10-13T09:52:30.8521964",
+      "ended": "2026-10-13T09:52:59.7271923",
+      "auditSha256": "75405d69cc809f3c54f637210597cd469b51eb4426d81a2fc47408c5c049881c"
+    }
+  },
+  "shellAssets": [
+    {
+      "url": "/",
+      "bytes": 11818,
+      "sha256": "a40366c8879a4fa5343675c42d518e081f1a3b237eb1231773290727b69b2e61",
+      "kind": "shell"
+    },
+    {
+      "url": "/app.js?v=6",
+      "bytes": 46236,
+      "sha256": "281d70dc715eb0ccf8f00cdfe5dec83e170fafc0989ac43cc02c072bd73b3b8a",
+      "kind": "shell"
+    },
+    {
+      "url": "/styles.css?v=6",
+      "bytes": 17760,
+      "sha256": "d60ce62b4866fafae714f2e98c746b770a36e282e0e1644b87447ba980001efc",
+      "kind": "shell"
+    },
+    {
+      "url": "/presentation.css?v=6",
+      "bytes": 12106,
+      "sha256": "c7ac55fb1b4f92b6c6161bddfcc043685fc04caa397427b610c0ecc124d13691",
+      "kind": "shell"
+    },
+    {
+      "url": "/tour-data.js?v=6",
+      "bytes": 3518,
+      "sha256": "0f19b92212f0362387cbe75963b9d142b02b0400bae0ba166e5205911708331e",
+      "kind": "shell"
+    },
+    {
+      "url": "/npc-dialogues.js?v=6",
+      "bytes": 7646,
+      "sha256": "bf12296b8fe670ed889e59526d144a16a9d16cc8349ff0a51064ba61306b0f4a",
+      "kind": "shell"
+    },
+    {
+      "url": "/presentation-data.js?v=6",
+      "bytes": 3884,
+      "sha256": "d176b6455c29d96ae042e3837d8632af88649af49d9cac36d081decbb809d826",
+      "kind": "shell"
+    },
+    {
+      "url": "/offline-backup.js?v=6",
+      "bytes": 3755,
+      "sha256": "07a0fc4e5e95172fdf928c12943e97e17c181b8a9eba8953b03f9d416a88af55",
+      "kind": "shell"
+    },
+    {
+      "url": "/content/sources.json",
+      "bytes": 47266,
+      "sha256": "23f144e2925aa46716b203b4eba9ed471ec1840b3ee7ce2e8e5ed9eecd2b00d6",
+      "kind": "shell"
+    },
+    {
+      "url": "/content/hk-coastline.geojson",
+      "bytes": 153924,
+      "sha256": "3d2906bcbe3d0b4ff0e14ccf7e8daf92bf85837c5e939220be4f871029b25b00",
+      "kind": "shell"
+    },
+    {
+      "url": "/content/exhibits-v39/history.png",
+      "bytes": 1110872,
+      "sha256": "a917deca8a40189a463906129b94fca6838989d7891012628af4dbb94841035c",
+      "kind": "shell"
+    },
+    {
+      "url": "/content/exhibits-v39/technology.png",
+      "bytes": 1295640,
+      "sha256": "f0f88c3065a224e0b86b1faa277b313207a30d6760ac53c139a9638d09a93260",
+      "kind": "shell"
+    },
+    {
+      "url": "/content/exhibits-v39/sports.png",
+      "bytes": 1963372,
+      "sha256": "6c5462273fe580c7df17684144fb1591d0b54e88affa44d21f0c47f83bf4ef7e",
+      "kind": "shell"
+    },
+    {
+      "url": "/content/exhibits-v39/two_systems.png",
+      "bytes": 986450,
+      "sha256": "7bece3656c06ba2a745960011ecc4f6cf4db235bae79d3243bbb593b545183b5",
+      "kind": "shell"
+    }
+  ],
+  "packageId": "46814b36e4923f6f"
+}

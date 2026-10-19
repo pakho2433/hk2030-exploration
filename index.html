@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="zh-Hant-HK">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#102a31">
+  <meta name="description" content="從香港出發，走進十五五規劃的第一身考察世界。認識2026至2030年的發展方向、已有成果與未來願景。">
+  <title>下一個五年｜2030 香港考察世界</title>
+  <link rel="stylesheet" href="/styles.css?v=6">
+  <link rel="stylesheet" href="/presentation.css?v=6">
+</head>
+<body class="presentation">
+  <main id="experience">
+    <canvas id="unity-canvas" tabindex="0" aria-label="第一身香港考察世界"></canvas>
+    <div id="backdrop" aria-hidden="true"></div>
+    <div id="intro" class="intro">
+      <header class="intro-top"><span class="wordmark">香港 <b>2030</b></span><span>國旗下的講話 · 第一身考察</span></header>
+      <section id="intro-copy" class="intro-copy" aria-live="polite">
+        <p id="intro-eyebrow" class="eyebrow">學生考察小隊 · 2026 — 2030</p>
+        <h1 id="intro-title">一箱器材，<br><em>看見下一個五年。</em></h1>
+        <p id="intro-description">先準備整個世界，再由你帶大家出發。</p>
+        <button id="begin-intro" class="primary" data-action="prepare">準備演講 <span aria-hidden="true">↗</span></button>
+        <p id="load-note" class="load-note" role="status">8站一次準備，考察途中不用下載場景。</p>
+        <div class="backup-tools"><button id="offline-save" class="text-button" hidden>保存離線備用</button><span id="backup-status" role="status"></span></div>
+        <button id="load-retry" class="text-button" hidden>重新載入地圖</button>
+      </section>
+      <div id="journey-art" class="journey-art" aria-hidden="true"><div class="mini-city"><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="case-handle"></div><div class="travel-case"><i></i><i></i><span>2030</span><b>✦</b></div><div class="orbit-chip chip-learning">◉</div><div class="orbit-chip chip-energy">☀</div><div class="orbit-chip chip-care">♡</div><div class="orbit-chip chip-logistics">↔</div><div class="journey-ring"></div></div>
+      <div id="definition-animation" class="definition" hidden aria-hidden="true"><span id="number-fifteen">15</span><span class="number-caption">第十五個</span><span class="times">·</span><span id="number-five">5</span><span class="number-caption">五年規劃</span></div>
+      <div id="timeline" class="timeline" aria-label="2026至2030年時間線" hidden>
+        <div class="timeline-track"><i id="timeline-fill"></i></div>
+        <span data-year="2026">2026</span><span data-year="2027">2027</span><span data-year="2028">2028</span><span data-year="2029">2029</span><span data-year="2030">2030</span>
+      </div>
+      <div class="intro-bottom"><button id="skip-intro" class="text-button" hidden>直接看出發提示</button><span id="load-label" role="status">準備全部考察地圖 · 0%</span><div id="load-track" class="load-track" role="progressbar" aria-label="全部地圖載入進度" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><i id="load-fill"></i></div></div>
+    </div>
+    <div id="hud" hidden>
+      <header class="hud-top"><div class="wordmark">香港 <b>2030</b><small>考察世界</small></div><div class="top-actions"><button id="map-button">考察地圖</button><button id="presenter-button">演講控制</button><button id="notes-button">備講提示</button><button id="mode-button" aria-pressed="true">演講模式</button><button id="sources-button">資料來源</button><button id="fullscreen-button" aria-label="全螢幕">⛶</button></div></header>
+      <div class="world-status"><span id="region-label">香港</span><label for="world-year">年份</label><select id="world-year"><option>2026</option><option>2027</option><option>2028</option><option>2029</option><option selected>2030</option></select><span id="year-note">2030願景示意</span><span id="tour-progress" role="status">講者自選</span></div>
+      <div id="crosshair" aria-hidden="true"></div>
+      <section class="station-caption" aria-live="polite"><p id="station-kicker" class="eyebrow">從香港出發</p><h2 id="station-name">維多利亞港</h2><p id="station-description"></p><div class="station-actions"><button id="interact-button">點亮未來 <kbd>E</kbd></button><button id="vr-button" hidden>體驗VR</button><button id="vr-exit-button" hidden>返回課室</button><button id="npc-button" hidden>打招呼</button><button id="exhibit-button" hidden>閱讀展板</button><button id="next-button">下一站 <span aria-hidden="true">↗</span></button></div><p id="vr-progress" class="vr-progress" role="status" hidden></p><p id="soil-sampler-status" class="fertilizer-status" role="status" hidden></p><p id="fertilizer-status" class="fertilizer-status" role="status" hidden></p><div id="demo-progress" class="demo-progress" hidden aria-label="動畫示範進度"><div id="demo-stages"></div><div class="demo-track"><i id="demo-fill"></i></div></div></section>
+      <nav id="vr-targets" class="vr-targets" aria-label="選擇太陽系探索目標" hidden></nav>
+      <div id="npc-greeting" class="npc-greeting" role="status" hidden><span aria-hidden="true">👋</span><b id="greeting-name"></b></div>
+      <p id="toast" class="toast" role="status" hidden></p>
+      <footer class="hud-bottom"><span id="control-help">WASD 行走 · 拖曳環顧 · E 看動畫 · F 打招呼</span><button id="restart-button" class="text-button">重看開場</button><button id="reset-button" class="text-button">返回安全位置</button></footer>
+      <div id="touch-controls"><div id="joystick" aria-label="左側拖動控制行走"><span id="joystick-thumb"></span></div><div id="look-zone" aria-label="右側拖動環顧"></div><span class="touch-hint">左側行走 · 右側環顧</span></div>
+    </div>
+    <dialog id="presenter-dialog" aria-labelledby="presenter-title"><div class="dialog-head"><div><p class="eyebrow">由演講者決定</p><h2 id="presenter-title">演講控制</h2></div><button class="close-dialog" aria-label="關閉演講控制">×</button></div><p class="dialog-intro">自行選擇考察站點和講解時間。隨時播放煙花、繼續考察，或結束演講。</p><div class="presenter-actions"><button id="presenter-fireworks" class="primary">播放煙花</button><button id="presenter-resume">繼續考察</button><button id="presenter-end">結束演講</button></div></dialog>
+    <dialog id="map-dialog"><div class="dialog-head"><div><p class="eyebrow">香港主地圖 · 內地考察分區</p><h2>我們走到哪裏？</h2></div><button class="close-dialog" aria-label="關閉考察地圖">×</button></div><p class="dialog-intro">香港各站保留地理方位，遠距離移動以考察交通過場連接。內地分區另作定位。</p><div id="geographic-map" class="geographic-map"></div><section class="cargo-route-card" aria-labelledby="cargo-route-title"><p class="eyebrow">海空聯運 · 自行選擇路線</p><h3 id="cargo-route-title">東莞港口 → 香港國際機場</h3><p>演講短程示範約24秒：在東莞完成安檢與打板，貨物由保安船舶送到香港機場，再接駁離港航班。</p><svg viewBox="0 0 700 76" role="img" aria-label="東莞港口經海路連到香港機場空側碼頭，再到貨運停機坪"><path d="M70 34H630" fill="none" stroke="#779da0" stroke-width="2" stroke-dasharray="6 7"/><g fill="#e8bc64"><circle cx="70" cy="34" r="6"/><circle cx="390" cy="34" r="6"/><circle cx="630" cy="34" r="6"/></g><g fill="#dfebe7" font-size="16" text-anchor="middle"><text x="70" y="68">東莞港口</text><text x="390" y="68">空側貨運碼頭</text><text x="630" y="68">貨運停機坪</text></g><text x="220" y="25" fill="#a9c4c1" text-anchor="middle" font-size="14">保安船舶 · 海路</text></svg><div class="cargo-route-actions"><button type="button" data-cargo-route="port">東莞港口自由探索</button><button type="button" class="primary" data-cargo-route="follow">從東莞跟隨貨物出發</button><button type="button" data-cargo-route="airport">香港機場貨運停機坪</button><button type="button" data-cargo-route="overview">香港機場鳥瞰總覽</button></div><p class="map-note">機場海岸線、跑道邊界及大樓輪廓參考地政總署／CSDI；跑道位置核對民航處機場圖。模型高度、步行區、碼頭細節及航程時間為教學調整。</p></section><nav id="stop-list" class="stop-list" aria-label="前往考察站點"></nav><p class="map-note">三維場景為教學重現，地標比例及步行區域為現場講解而調整。</p><p class="map-note">部分建築模型資料 © 香港特別行政區政府（地政總署）／CSDI；教學材質另製。</p><button id="map-sources-button" class="notes-source-button">地圖資料與署名</button></dialog>
+    <dialog id="sources-dialog"><div class="dialog-head"><div><p class="eyebrow">已有成果 · 計劃推行 · 願景示意</p><h2>我們根據甚麼介紹？</h2></div><button class="close-dialog" aria-label="關閉資料來源">×</button></div><p class="dialog-intro">2030畫面是教學願景。模型、人物及模擬介面不代表官方工程設計或實際產品。</p><div id="source-list"></div></dialog>
+    <dialog id="notes-dialog" aria-labelledby="notes-title"><div class="dialog-head"><div><p class="eyebrow">講者備用 · 觀眾以動畫為主</p><h2 id="notes-title">備講提示</h2></div><button class="close-dialog" aria-label="關閉備講提示">×</button></div><p id="notes-cue" class="notes-cue"></p><p id="notes-kind" class="notes-kind"></p><p id="notes-body" class="dialog-intro"></p><button id="notes-sources-button" class="notes-source-button">查看官方資料來源</button></dialog>
+    <dialog id="exhibit-dialog" aria-labelledby="exhibit-title"><div class="dialog-head"><div><p class="eyebrow">國家成就館 · 圖片與簡介</p><h2 id="exhibit-title">國家歷史與發展</h2></div><button class="close-dialog" aria-label="關閉展板">×</button></div><nav class="exhibit-tabs" aria-label="選擇展板"><button data-exhibit="history">歷史地圖</button><button data-exhibit="technology">天宮太空站</button><button data-exhibit="sports">體育榮耀</button><button data-exhibit="two_systems">會面交流</button></nav><p id="exhibit-description" class="dialog-intro"></p><img id="exhibit-image" alt="國家歷史與發展" width="2048" style="display:block;width:100%;height:auto;margin-top:16px"><p class="map-note">可放大頁面閱讀。照片按原比例呈現；詳盡資料及署名見「資料來源」。</p></dialog>
+    <dialog id="npc-dialog" aria-labelledby="npc-name"><div class="dialog-head"><div><p id="npc-role" class="eyebrow">路人 · 教學對話</p><h2 id="npc-name">海旁路人</h2></div><button class="close-dialog" aria-label="結束對話">×</button></div><div id="npc-conversation" class="npc-conversation" role="log" aria-live="polite" aria-label="與路人的對話"></div><div id="npc-questions" class="npc-questions" aria-label="選擇想聊的話題"></div><p id="npc-note" class="npc-note"></p></dialog>
+    <div id="transition" class="transition" hidden><p class="eyebrow">考察旅程</p><h2 id="transition-name"></h2><p id="transition-region"></p></div>
+    <div id="error-panel" class="error-panel" hidden><h2>地圖未能載入</h2><p id="error-message"></p><button id="retry-button" class="primary">重新載入</button><p>建議使用更新版本的 Chrome、Edge 或 Safari；手機請保持頁面開啟。</p></div>
+  </main>
+  <script type="module" src="/app.js?v=6"></script>
+</body>
+</html>
